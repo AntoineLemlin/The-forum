@@ -1,4 +1,6 @@
 .card {
+  width: 25rem;
+  height: 12rem;
   .list-group-item {
     font-size: 0.5rem;
   }
@@ -23,4 +25,9 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+#last-active-card {
+  width: 10rem;
+  height: auto;
 }

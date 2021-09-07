@@ -135,7 +135,8 @@ header nav .navbar-toggler-icon {
 }
 
 .card {
-  width: 18rem;
+  width: 25rem;
+  height: 12rem;
 }
 
 .card .list-group-item {
@@ -144,6 +145,10 @@ header nav .navbar-toggler-icon {
 
 .card .card-text {
   font-size: 0.75rem;
+}
+
+.card .container {
+  margin: 1rem 0.3rem;
 }
 
 .card .topic,
@@ -166,6 +171,11 @@ header nav .navbar-toggler-icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#last-active-card {
+  width: 10rem;
+  height: auto;
 }
 
 * {
@@ -207,5 +217,28 @@ header nav .navbar-toggler-icon {
 * body #search-bar button i {
   font-size: 12px;
   text-align: center;
+}
+
+* body #login input {
+  border-radius: 10px;
+}
+
+* body #login #submit {
+  border-radius: 20px;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, #3f5efb), color-stop(65%, #fc466b), to(#9c52b4));
+  background: linear-gradient(90deg, #3f5efb 18%, #fc466b 65%, #9c52b4 100%);
+  border: none;
+}
+
+* body #table-side {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+* body #table-side .thead {
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, #3f5efb), color-stop(65%, #fc466b), to(#9c52b4));
+  background: linear-gradient(90deg, #3f5efb 18%, #fc466b 65%, #9c52b4 100%);
 }
 /*# sourceMappingURL=style.css.map */

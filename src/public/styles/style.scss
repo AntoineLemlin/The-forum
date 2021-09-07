@@ -40,5 +40,36 @@
         }
       }
     }
+
+    #login {
+      input {
+        border-radius: 10px;
+      }
+      #submit {
+        border-radius: 20px;
+        color: white;
+        background: linear-gradient(
+          90deg,
+          rgba(63, 94, 251, 1) 18%,
+          rgba(252, 70, 107, 1) 65%,
+          rgba(156, 82, 180, 1) 100%
+        );
+        border: none;
+      }
+    }
+
+    #table-side {
+      overflow: hidden;
+      border-radius: 15px;
+      .thead {
+        color: white;
+        background: linear-gradient(
+          90deg,
+          rgba(63, 94, 251, 1) 18%,
+          rgba(252, 70, 107, 1) 65%,
+          rgba(156, 82, 180, 1) 100%
+        );
+      }
+    }
   }
 }
