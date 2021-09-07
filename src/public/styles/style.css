@@ -11,6 +11,12 @@ header #title {
   text-transform: uppercase;
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
+  padding: 6rem 0;
+}
+
+header nav li {
+  font-size: 30px;
+  font-weight: 500;
 }
 
 header nav .nav-item {
@@ -27,22 +33,104 @@ header nav .navbar-toggler-icon {
   padding: 10px;
 }
 
-.breadcrumb {
+.bread-style {
   background-color: white;
+  border-radius: 20px 20px 0 0;
 }
 
-.breadcrumb-item {
+.bread-item {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
   font-size: 2rem;
 }
 
-.breadcrumb-item a {
+.bread-item a {
   font-size: 2rem;
 }
 
-.breadcrumb-item a i {
+.bread-item a i {
   font-size: 1.8rem;
+}
+
+.bread-foot {
+  background-color: #293133;
+}
+
+.bread-foot__item {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  color: #d473d4;
+  font-size: 1.5rem;
+}
+
+.bread-foot__item a {
+  font-size: 1.5rem;
+  color: #d473d4;
+}
+
+.bread-foot__item a i {
+  font-size: 1.5rem;
+  color: #d473d4;
+}
+
+#social-media {
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, #3f5efb), color-stop(65%, #fc466b), to(#9c52b4));
+  background: linear-gradient(90deg, #3f5efb 18%, #fc466b 65%, #9c52b4 100%);
+  padding-top: 8rem;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+}
+
+#social-media ul li {
+  list-style-type: none;
+  border: 2px solid white;
+  margin-bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+#social-media ul li i {
+  font-size: 30px;
+}
+
+.list-bottom li {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+
+.list-bottom .list-color {
+  color: #d473d4;
+}
+
+.card {
+  width: 18rem;
+}
+
+.card .list-group-item {
+  font-size: 0.5rem;
+}
+
+.card .card-text {
+  font-size: 0.75rem;
+}
+
+.card .topic,
+.card .posts,
+.card .date {
+  font-size: 0.75rem;
 }
 
 * {
@@ -53,8 +141,35 @@ header nav .navbar-toggler-icon {
   font-size: 62.5%;
 }
 
-* nav li {
-  font-size: 30px;
-  font-weight: 500;
+* body #main-container {
+  background-color: white;
+  min-height: 20rem;
+  border-radius: 7px;
+  -webkit-box-shadow: 1px 1px 5px 0 grey;
+          box-shadow: 1px 1px 5px 0 grey;
+  position: relative;
+  z-index: 2;
+  padding: 15px 0 50px 0;
+  margin-top: -50px;
+}
+
+* body #search-bar {
+  border: 1px solid black;
+  border-radius: 20px;
+  outline: none;
+  padding: 3px 5px;
+}
+
+* body #search-bar input {
+  border: none;
+}
+
+* body #search-bar button {
+  border-left: 1px solid grey;
+}
+
+* body #search-bar button i {
+  font-size: 12px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

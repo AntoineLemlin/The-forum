@@ -1,16 +1,42 @@
 @import "./header";
 @import "./breadcrumb";
+@import "./footer";
+@import "./card";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  body {
+    #main-container {
+      background-color: white;
+      min-height: 20rem;
+      border-radius: 7px;
+      box-shadow: 1px 1px 5px 0 grey;
+      position: relative;
+      z-index: 2;
+      padding: 15px 0 50px 0;
+      margin-top: -50px;
+    }
 
-  nav {
-    li {
-      font-size: 30px;
-      font-weight: 500;
+    #search-bar {
+      border: 1px solid black;
+      border-radius: 20px;
+      outline: none;
+      padding: 3px 5px;
+
+      input {
+        border: none;
+      }
+
+      button {
+        border-left: 1px solid grey;
+        i {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
     }
   }
 }

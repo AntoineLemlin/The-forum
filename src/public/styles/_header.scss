@@ -2,15 +2,22 @@
 
 header {
   filter: hue-rotate(270deg);
+
   #title {
     font-size: 10rem;
     color: white;
     text-transform: uppercase;
     font-family: "Urbanist", sans-serif;
     font-weight: 300;
+    padding: 6rem 0;
   }
 
   nav {
+    li {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
     .nav-item {
       font-family: "Urbanist", sans-serif;
       font-size: 35px;
