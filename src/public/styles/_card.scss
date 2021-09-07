@@ -1,15 +1,26 @@
 .card {
-  width: 18rem;
   .list-group-item {
     font-size: 0.5rem;
   }
   .card-text {
     font-size: 0.75rem;
   }
+  .container {
+    margin: 1rem 0.3rem;
+  }
 
   .topic,
   .posts,
   .date {
     font-size: 0.75rem;
+  }
+}
+
+.card-container {
+  margin: auto;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -31,15 +31,31 @@
 
 .list-bottom {
   li {
+    list-style-type: none;
     font-family: "Urbanist", sans-serif;
     font-weight: 700;
-    list-style-type: none;
-    font-size: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: #d473d4;
+      font-size: 1.1rem;
+      i {
+        color: #d473d4;
+        font-size: 1.1rem;
+      }
+    }
+    .list-dark {
+      font-size: 1.2rem;
+      color: grey;
+    }
   }
-  a {
-    text-decoration: none;
-  }
-  .list-color {
-    color: #d473d4;
-  }
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  background-color: #d473d4;
+  color: white;
+  // display: none;
 }
