@@ -4,7 +4,7 @@ header {
   filter: hue-rotate(270deg);
 
   #title {
-    font-size: 10rem;
+    font-size: clamp(30px, 15vw, 10rem);
     color: white;
     text-transform: uppercase;
     font-family: "Urbanist", sans-serif;
