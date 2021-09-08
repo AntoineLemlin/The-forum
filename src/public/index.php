@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="styles/style.css" />
     <title>Tracker</title>
   </head>
+
+  <?php
+  require_once "../App/Controller/login_control.php";
+
+
+ ?>
+  
+  
   <body class="bg-light">
     <header id="header-id">
       <div
@@ -467,20 +475,20 @@
 
           <hr>
 
-          <form id="login">
+          <form id="login" method="POST">
             <div class="form-group">
-              <label class="h4" for="exampleInputEmail1">Username</label>
-              <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
+              <label class="h4" maxlength="20" for="username">Username</label>
+              <input type="text" name="username" class="form-control" id="username" aria-describedby="username" placeholder="Username">
             </div>
             <div class="form-group">
               <label class="h4" for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
             </div>
             <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="remember">
+              <input type="checkbox" name="remember" class="form-check-input" id="remember">
               <label class="form-check-label ml-2 h4" for="remember">Remember me</label>
             </div>
-            <button id="submit" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
+            <button id="submit" name="login" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
           </form>
 
           <hr>

@@ -2,11 +2,11 @@
 
 
 
-$hash1 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
+/* $hash1 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 $hash2 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 $hash3 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 $hash4 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
-$hash5 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
+$hash5 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT); */
 
 function insert($avatar, $email, $nickname,$password,$signature) {
     require "db_connect.php";
@@ -47,12 +47,12 @@ function insert($avatar, $email, $nickname,$password,$signature) {
  
    
 }
-
+/*
 insert(" ","bob@becode.com","spiderman",$hash1,"goat");
 insert(" ","joe@becode.com","batman",$hash2,"goat");
 insert(" ","mike@becode.com","antman",$hash3,"goat");
 insert(" ","nick@becode.com","superman",$hash4,"goat");
-insert(" ","james@becode.com","joker",$hash5,"goat");
+insert(" ","james@becode.com","joker",$hash5,"goat");*/
 
 
 
