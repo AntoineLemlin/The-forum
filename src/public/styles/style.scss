@@ -2,6 +2,7 @@
 @import "./breadcrumb";
 @import "./footer";
 @import "./card";
+@import "./topics";
 
 * {
   margin: 0;
@@ -71,5 +72,7 @@
         );
       }
     }
+
+    
   }
 }
