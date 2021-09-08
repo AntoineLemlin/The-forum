@@ -246,11 +246,11 @@ header nav .navbar-toggler-icon {
   text-align: center;
 }
 
-* body #login input {
+* body #login input, * body #register input {
   border-radius: 10px;
 }
 
-* body #login #submit {
+* body #login #submit, * body #register #submit {
   border-radius: 20px;
   color: white;
   background: -webkit-gradient(linear, left top, right top, color-stop(18%, #3f5efb), color-stop(65%, #fc466b), to(#9c52b4));
