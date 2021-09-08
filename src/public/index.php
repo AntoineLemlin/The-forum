@@ -21,7 +21,7 @@
   </head>
 
   <?php
-  require_once "../App/Controller/login_control.php";
+  require_once("../App/Controller/login_control.php");
 
 
  ?>

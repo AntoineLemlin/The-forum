@@ -81,7 +81,7 @@
                   >
                 </li>
                 <li class="breadcrumb-item bread-item active" aria-current="page">
-                  Board index
+                  Board index / Category One / Topic Icon Demos
                 </li>
               </ol>
             </nav>
@@ -168,7 +168,7 @@
         <tbody class="bg-light">
             <tr class="">
                 <td class="d-flex h2 align-items-center">
-                  <i class="fas fa-bullhorn mr-5 p-3 border rounded-circle"></i>
+                  <i class="fas fa-check mr-5 p-3 text-success border border-success rounded-circle"></i>
                   <div class="text flex-column">
                       <h4>Topics Unread (Mine)</h3>
                       <h5>by PlanetStyles</h4>
@@ -196,7 +196,7 @@
             </tr>
             <tr class="">
                 <td class="d-flex h2 align-items-center">
-                  <i class="fas fa-bullhorn mr-5 p-3 border rounded-circle"></i>
+                  <i class="fas fa-times border-danger text-danger mr-5 p-3 border rounded-circle"></i>
                   <div class="text flex-column">
                       <h4>Topics Unread (Mine)</h3>
                       <h5>by PlanetStyles</h4>
@@ -226,9 +226,26 @@
 
     </table>
 </div>
+    <div class="row">
+        <div class="col-12 mt-5 d-flex">
+            <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href="#">New Topic <i class="fas fa-pencil-alt ml-2 h4"></i></a>
+            <a id="topic-filter" class="h4 mr-5 text-dark rounded border border-dark bg-light p-3" href="#"><i class="fas fa-filter h4"></i></a>
+            <ul class="d-flex align-items-center h3 ml-auto">
+                <li class="list-unstyled">12 topics</li>
+                <li class="ml-5">Page 1 of 1</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mt-5 d-flex">
+            <a id="return-board" class="h4 mr-5 text-dark p-3" href="#"> < Return to Board Index</a>
+            <a id="jump-to" class="h4 mr-5 text-dark bg-light p-3 ml-auto" href="#"> Jump to ^</a>
+        </div>
+    </div>
 </div>
 
-                </div>
+</div>
               
               <div class="col-md-3 col-lg-3 px-5 ">
                 <!-- Search Bar -->
@@ -372,6 +389,26 @@
                     </tbody>
                   </table>
                 </div>
+
+                <div class="table-responsive mt-5">
+                    <table id="widget-side" class="table">
+                      <thead class="thead bg-dark text-white">
+                        <tr>
+                          <th scope="col" class="h3">
+                            Blank Widget (ALT block)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="bg-light">
+                        <tr class="d-flex justify-content-center flex-wrap">
+                            <td id="last-active-card" class="bg-white w-75 my-3">
+                              <h2>Some information goes here :)</h2>
+                            </td>
+                            
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
       
       
       

@@ -190,6 +190,10 @@ header nav .navbar-toggler-icon {
   border-radius: 20px;
 }
 
+#jump-to {
+  border-radius: 20px;
+}
+
 #announcement table, #topics table {
   border-radius: 20px;
   overflow: hidden;
@@ -263,5 +267,10 @@ header nav .navbar-toggler-icon {
   color: white;
   background: -webkit-gradient(linear, left top, right top, color-stop(18%, #3f5efb), color-stop(65%, #fc466b), to(#9c52b4));
   background: linear-gradient(90deg, #3f5efb 18%, #fc466b 65%, #9c52b4 100%);
+}
+
+* body #widget-side {
+  overflow: hidden;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=style.css.map */
