@@ -7,52 +7,41 @@ class Check_Login{
     public function match_username($username){
         require_once ("db_connect.php");
 
-        $statement = $conn->prepare("SELECT * from Users where Nickname=" . $username);
-
-        $statement->execute(); 
+        
+        $sql="SELECT password from Users where Nickname=:nickname";
+        $statement = $conn->prepare($sql);
+        $statement->BindParam(':nickname',$username); 
+        $statement->execute();
         $username_result = $statement->fetch();
        
+
+       
         
-        if ($username_result != NULL ) {
-            echo $username_result;
+        if ($username_result["password"] != false ) {
+            return $username_result["password"];
             
             
 
         }
-        else {
-            return false  ;
-        }
+        // else {
+        //     return false  ;
+        // }
 
     
 
 
     }
-/*
-    public function match_password($password){
-        require_once ("db_connect.php");
-       
-       
-       $hash = $this -> match_username($username);
-       
-        if (password_verify($password, $hash)) {
-            echo 'Le mot de passe est valide !';
-        } else {
-            echo 'Le mot de passe est invalide.';
-        }
-
-
-    }*/
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
