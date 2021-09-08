@@ -468,28 +468,59 @@
           <hr>
 
           <ul class="d-flex align-items-center">
-            <li class="h4 list-unstyled"><a class="h4 text-dark" href="#">Login</a></li>
-            <li class="h4 ml-5"><a class="h4 text-dark" href="#">Register</a></li>
-            <li class="h4 list-unstyled ml-5 ml-auto"><a class="h4 text-dark" href="#"><i class="fas fa-minus"></i></a></ul>li>
-          </ul>
+                  <li class="h4 list-unstyled"><a class="h4 text-dark" href="#carousel-example" role="button" data-slide="prev">Login</a></li>
+                  <li class="h4 ml-5"><a class="h4 text-dark" href="#carousel-example" role="button" data-slide="next">Register</a></li>
+                  <li class="h4 list-unstyled ml-5 ml-auto"><a class="h4 text-dark" href="#"><i class="fas fa-minus"></i></a></ul>li>
+                </ul>
+      
+                <hr>
+      
+                <div id="carousel-example" class="carousel slide" data-interval="false">
 
-          <hr>
-
-          <form id="login" method="POST">
-            <div class="form-group">
-              <label class="h4" maxlength="20" for="username">Username</label>
-              <input type="text" name="username" class="form-control" id="username" aria-describedby="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-              <label class="h4" for="exampleInputPassword1">Password</label>
-              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" name="remember" class="form-check-input" id="remember">
-              <label class="form-check-label ml-2 h4" for="remember">Remember me</label>
-            </div>
-            <button id="submit" name="login" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
-          </form>
+             
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h3 class="mb-3">Login</h3>
+                            <form id="login">
+                                <div class="form-group">
+                                  <label class="h4" for="username">Username</label>
+                                  <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                  <label class="h4" for="exampleInputPassword1">Password</label>
+                                  <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                  <input type="checkbox" class="form-check-input" id="remember">
+                                  <label class="form-check-label ml-2 h4" for="remember">Remember me</label>
+                                </div>
+                                <button id="submit" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
+                              </form>
+                        </div>
+                        <div class="carousel-item">
+                            <h3 class="mb-3">Register</h3>
+                            <form id="register">
+                                <div class="form-group">
+                                  <label class="h4" for="username">Username</label>
+                                  <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="h4" for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                                  </div>
+                                <div class="form-group">
+                                  <label class="h4" for="exampleInputPassword1">Password</label>
+                                  <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label class="h4" for="email">Signature</label>
+                                    <input type="text" maxlength="100" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                                  </div>
+                                <button id="submit" name="register" type="submit" class="btn btn-primary w-100 rounded-5">Register</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
 
           <hr>
 
