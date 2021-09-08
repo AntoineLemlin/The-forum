@@ -10,8 +10,16 @@ $signature = $_POST[''];
 
 class register {
     
-    
 
+    public function ValidateNickname($name) {
+        require "../Model/nickname_check.php";
+       $nickName_final = nickname_unique($name) ;
+
+       if ( $nickName_final == false ) {
+           echo "mauvais identifiant";
+       }
+
+    }
     public function validateEmail($mail) {
         if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
             echo "{$mail}: A valid email"."<br>";
@@ -22,6 +30,7 @@ class register {
     }
 }
 
-
+$appel = new register ();
+$appel -> ValidateNickname('spiderman');
 
 ?>

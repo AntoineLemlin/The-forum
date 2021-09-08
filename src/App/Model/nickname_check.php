@@ -1,5 +1,6 @@
 <?php 
 
+// ----------------user nickname checking -------------------------
 
 
 function nickname_unique($nickname){
@@ -10,14 +11,13 @@ function nickname_unique($nickname){
     $statement -> BindParam (':nickname', $nickname);
     $statement -> execute () ;
     $nickname_result = $statement -> fetch() ;
+    return $nickname_result['nickname'] ;
 
-    if ($nickname_result) {
-        echo 'ntm nickname deja pris' ;
-    }
-    
 
 
 }
+
+
 
 
 
