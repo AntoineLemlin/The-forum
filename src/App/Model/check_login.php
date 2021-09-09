@@ -8,24 +8,22 @@ class Check_Login{
         require_once ("db_connect.php");
 
         
-        $sql="SELECT password from Users where Nickname=:nickname";
+        $sql="SELECT * from Users where Nickname=:nickname";
         $statement = $conn->prepare($sql);
         $statement->BindParam(':nickname',$username); 
         $statement->execute();
-        $username_result = $statement->fetch();
-       
-
-       
+        $username_result = $statement->fetch(PDO::FETCH_ASSOC);
         
-        if ($username_result["password"] != false ) {
-            return $username_result["password"];
+        
+        
+        if ($username_result["Password"] != null ) {
+            print_r($username_result);
+            return $username_result["Password"];
             
-            
-
         }
-        // else {
-        //     return false  ;
-        // }
+        else {
+            return false  ;
+        }
 
     
 

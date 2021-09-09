@@ -454,6 +454,12 @@
         
         <div class="col-md-3 col-lg-3 px-5 ">
           <!-- Search Bar -->
+          <?php 
+          $img = "pawolad364@rebation.com";
+         echo "<img class='rounded-circle border border-dark mb-5 ' src='https://secure.gravatar.com/avatar/". md5($img) . "?s=75'>";
+          
+          ?>
+
          <form id="search-bar" class="form-inline flex-nowrap">
           <input class="form-control w-100" type="search"
           placeholder="Search" aria-label="Search">
@@ -481,25 +487,25 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <h3 class="mb-3">Login</h3>
-                            <form id="login">
+                            <form method="POST" id="login">
                                 <div class="form-group">
                                   <label class="h4" for="username">Username</label>
-                                  <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
+                                  <input type="text" class="form-control" name="username" id="username" aria-describedby="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                   <label class="h4" for="exampleInputPassword1">Password</label>
-                                  <input type="password" class="form-control" id="password" placeholder="Password">
+                                  <input name="password" type="password" class="form-control" id="password" placeholder="Password">
                                 </div>
                                 <div class="form-group form-check">
                                   <input type="checkbox" class="form-check-input" id="remember">
                                   <label class="form-check-label ml-2 h4" for="remember">Remember me</label>
                                 </div>
-                                <button id="submit" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
+                                <button name="login" id="submit" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
                               </form>
                         </div>
                         <div class="carousel-item">
                             <h3 class="mb-3">Register</h3>
-                            <form id="register">
+                            <form method="POST" id="register">
                                 <div class="form-group">
                                   <label class="h4" for="username">Username</label>
                                   <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">

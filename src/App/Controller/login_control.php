@@ -2,7 +2,7 @@
 
 if(isset($_POST["login"])){
 
-    if(isset($_POST["username"]) && isset($_POST["password"])){
+    if(!empty($_POST["username"]) && !empty($_POST["password"])){
        include_once ("/var/www/html/App/Model/check_login.php");
         $username=$_POST["username"];
         $password=$_POST["password"];
