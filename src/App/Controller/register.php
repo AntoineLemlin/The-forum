@@ -25,8 +25,7 @@ class register {
             else {
                 if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     require "../App/Model/insert_data.php";
-                    insert($email,$name,$password,$signature);
-                    echo "lol";
+                    insert($mail,$name,$password,$signature);
                 }
                 else {
                     echo "{$email}: Not a valid email"."<br>";
