@@ -302,23 +302,23 @@
                               </form>
                         </div>
                         <div class="carousel-item">
-                            <h3 class="mb-3">Register</h3>
-                            <form id="register">
+                        <h3 class="mb-3">Register</h3>
+                            <form method="POST" id="register">
                                 <div class="form-group">
                                   <label class="h4" for="username">Username</label>
-                                  <input name="username" type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
+                                  <input type="text" class="form-control" id="username" name="username" aria-describedby="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label class="h4" for="email">Email</label>
-                                    <input name="email" type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email">
                                   </div>
                                 <div class="form-group">
                                   <label class="h4" for="exampleInputPassword1">Password</label>
-                                  <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                 </div>
                                 <div class="form-group">
-                                    <label class="h4" for="signature">Signature</label>
-                                    <input name="signature" type="text" maxlength="100" class="form-control" id="signature" aria-describedby="signature" placeholder="signature">
+                                    <label class="h4" for="email">Signature</label>
+                                    <input type="text" maxlength="100" class="form-control" id="signature" name="signature" aria-describedby="signature" placeholder="Signature">
                                   </div>
                                 <button id="submit" name="register" type="submit" class="btn btn-primary w-100 rounded-5">Register</button>
                               </form>

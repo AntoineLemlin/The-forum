@@ -508,19 +508,19 @@
                             <form method="POST" id="register">
                                 <div class="form-group">
                                   <label class="h4" for="username">Username</label>
-                                  <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
+                                  <input type="text" class="form-control" id="username" name="username" aria-describedby="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label class="h4" for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email">
                                   </div>
                                 <div class="form-group">
                                   <label class="h4" for="exampleInputPassword1">Password</label>
-                                  <input type="password" class="form-control" id="password" placeholder="Password">
+                                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                 </div>
                                 <div class="form-group">
                                     <label class="h4" for="email">Signature</label>
-                                    <input type="text" maxlength="100" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                                    <input type="text" maxlength="100" class="form-control" id="signature" name="signature" aria-describedby="signature" placeholder="Signature">
                                   </div>
                                 <button id="submit" name="register" type="submit" class="btn btn-primary w-100 rounded-5">Register</button>
                               </form>
