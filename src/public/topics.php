@@ -1,4 +1,4 @@
-<?php  session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,11 +20,12 @@
     <link rel="stylesheet" href="styles/style.css" />
     <title>Tracker</title>
   </head>
-   
+  
   <?php
 
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
+  require_once("../App/Controller/register.php");
  ?>
 
   <body class="bg-light">
@@ -60,12 +61,11 @@
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
               <ul class="navbar-nav ml-auto">
+              <?php include("../App/View/header_display.php");?>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-pen-square"></i>Register</a>
+                  <?php require_once("../App/View/logout_message.php");?>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
-                </li>
+
               </ul>
             </div>
           </nav>
@@ -255,82 +255,23 @@
 
 </div>
               
-              <div class="col-md-3 col-lg-3 px-5 ">
-                <?php echo "<h2>" . $_SESSION['username'] . "</h2>"; ?>
-                <!-- Search Bar -->
-               <form id="search-bar" class="form-inline flex-nowrap">
-                <input class="form-control w-100" type="search"
-                placeholder="Search" aria-label="Search">
-                <button class="btn btn-
-                info" type="submit"><i class="fas fa-search"></i>
-              </button>
-              <button class="btn btn-
-                info" type="submit"><i class="fas fa-cog"></i>
-              </button>
-                </form>       
-      
-                <hr>
-      
-                <ul class="d-flex align-items-center">
-                  <li class="h4 list-unstyled"><a class="h4 text-dark" href="#carousel-example" role="button" data-slide-to="0">Login</a></li>
-                  <li class="h4 ml-5"><a class="h4 text-dark" href="#carousel-example" role="button" data-slide-to="1">Register</a></li>
-                  <li class="h4 list-unstyled ml-5 ml-auto"><a class="h4 text-dark" href="#"><i class="fas fa-minus"></i></a></ul>li>
-                </ul>
-      
-                <hr>
-      
-                <div id="carousel-example" class="carousel slide" data-interval="false">
+<div class="col-md-3 col-lg-3 px-5 ">
+          <?php include("../App/View/reduced_profile.php"); ?>
+          <!-- Search Bar -->
+         <form id="search-bar" class="form-inline flex-nowrap">
+          <input class="form-control w-100" type="search"
+          placeholder="Search" aria-label="Search">
+          <button class="btn btn-
+          info" type="submit"><i class="fas fa-search"></i>
+        </button>
+        <button class="btn btn-
+          info" type="submit"><i class="fas fa-cog"></i>
+        </button>
+          </form>       
 
-             
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <h3 class="mb-3">Login</h3>
-                            <form id="login">
-                                <div class="form-group">
-                                  <label class="h4" for="username">Username</label>
-                                  <input name="username" type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                  <label class="h4" for="exampleInputPassword1">Password</label>
-                                  <input name="password" type="password" class="form-control" id="password" placeholder="Password">
-                                </div>
-                                <div class="form-group form-check">
-                                  <input name="remember" type="checkbox" class="form-check-input" id="remember">
-                                  <label class="form-check-label ml-2 h4" for="remember">Remember me</label>
-                                </div>
-                                <button id="submit" type="submit" class="btn btn-primary w-100 rounded-5">Login</button>
-                              </form>
-                        </div>
-                        <div class="carousel-item">
-                        <h3 class="mb-3">Register</h3>
-                            <form method="POST" id="register">
-                                <div class="form-group">
-                                  <label class="h4" for="username">Username</label>
-                                  <input type="text" class="form-control" id="username" name="username" aria-describedby="username" placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                    <label class="h4" for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email">
-                                  </div>
-                                <div class="form-group">
-                                  <label class="h4" for="exampleInputPassword1">Password</label>
-                                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                                </div>
-                                <div class="form-group">
-                                    <label class="h4" for="email">Signature</label>
-                                    <input type="text" maxlength="100" class="form-control" id="signature" name="signature" aria-describedby="signature" placeholder="Signature">
-                                  </div>
-                                <button id="submit" name="register" type="submit" class="btn btn-primary w-100 rounded-5">Register</button>
-                              </form>
-                        </div>
-                    </div>
-                </div>
+          <hr>
 
-                
-      
-                <hr>
-      
-                <a href="#" class="h4 text-dark">I forgot my password</a>
+               <?php include("../App/View/form_display.php") ?>
       
                 <div class="table-responsive mt-5">
                   <table id="table-side" class="table">
