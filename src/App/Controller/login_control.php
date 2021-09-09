@@ -14,7 +14,7 @@ if(isset($_POST["login"])){
 
     }
     else{
-        echo "ERRROR";
+        echo "<h3 class='message bg-white border border-danger text-danger'>ERRROR</h3>";
     }
 }
 

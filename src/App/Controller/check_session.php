@@ -1,6 +1,6 @@
 <?php 
 if(empty($_SESSION['username'])){
-    echo "Connect for more fun";
+    echo "<h3 class='message bg-white border border-success text-success'>Connect for more fun</h3>";
 }
 
 ?>

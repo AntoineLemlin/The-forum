@@ -474,7 +474,7 @@
           <ul class="d-flex align-items-center">
                   <li class="h4 list-unstyled"><a class="h4 text-dark" href="#carousel-example" role="button" data-slide-to="0">Login</a></li>
                   <li class="h4 ml-5"><a class="h4 text-dark" href="#carousel-example" role="button" data-slide-to="1">Register</a></li>
-                  <li class="h4 list-unstyled ml-5 ml-auto"><a class="h4 text-dark" href="#"><i class="fas fa-minus"></i></a></ul>li>
+                  <li class="h4 list-unstyled ml-5 ml-auto"><a class="h4 text-dark" href="#"><i class="fas fa-minus"></i></a></ul>
                 </ul>
       
                 <hr>
