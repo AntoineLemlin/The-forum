@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +20,13 @@
     <link rel="stylesheet" href="styles/style.css" />
     <title>Tracker</title>
   </head>
+   
+  <?php
+
+  require_once("../App/Controller/check_session.php");
+  require_once("../App/Controller/login_control.php");
+ ?>
+
   <body class="bg-light">
     <header id="header-id">
       <div
@@ -248,6 +256,7 @@
 </div>
               
               <div class="col-md-3 col-lg-3 px-5 ">
+                <?php echo "<h2>" . $_SESSION['username'] . "</h2>"; ?>
                 <!-- Search Bar -->
                <form id="search-bar" class="form-inline flex-nowrap">
                 <input class="form-control w-100" type="search"

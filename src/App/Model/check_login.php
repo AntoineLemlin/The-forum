@@ -4,25 +4,25 @@ class Check_Login{
 
 
 
-    public function match_username($username){
+    public function match_username($username, $password){
         require_once ("db_connect.php");
 
         
-        $sql="SELECT * from Users where Nickname=:nickname";
+        $sql="SELECT Nickname, Password from Users where Nickname=:nickname AND Password=:password ";
         $statement = $conn->prepare($sql);
-        $statement->BindParam(':nickname',$username); 
+        $statement->BindParam(':nickname',$username,); 
+        $statement->BindParam(':password',$password,); 
+
         $statement->execute();
         $username_result = $statement->fetch(PDO::FETCH_ASSOC);
         
         
-        
-        if ($username_result["Password"] != null ) {
-            print_r($username_result);
-            return $username_result["Password"];
-            
+        if($statement->rowCount() > 0){
+            $_SESSION['username'] = $username;
+            echo "Successfully Login";
         }
-        else {
-            return false  ;
+        else{
+            echo "Try again";
         }
 
     

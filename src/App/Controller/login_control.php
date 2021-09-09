@@ -9,19 +9,10 @@ if(isset($_POST["login"])){
         
         $user_checkin = new Check_Login();
         
-        if ($user_checkin -> match_username($username) != false ) {
-              echo "check";
-        } 
-        else {
-            echo "recommence";
-        }
-        
+        $user_checkin -> match_username($username, $password);
 
 
     }
-
-    
-    
     else{
         echo "ERRROR";
     }
