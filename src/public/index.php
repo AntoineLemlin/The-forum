@@ -66,6 +66,10 @@
                 <li class="nav-item">
                   <a class="nav-link text-white" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
                 </li>
+                <li class="nav-item">
+                  <?php require_once("../App/View/logout_message.php");?>
+                </li>
+
               </ul>
             </div>
           </nav>
@@ -454,12 +458,6 @@
         
         <div class="col-md-3 col-lg-3 px-5 ">
           <!-- Search Bar -->
-          <?php 
-          $img = "pawolad364@rebation.com";
-         echo "<img class='rounded-circle border border-dark mb-5 ' src='https://secure.gravatar.com/avatar/". md5($img) . "?s=75'>";
-          echo "<h2>" . $_SESSION['username'] . "</h2>";
-          ?>
-
          <form id="search-bar" class="form-inline flex-nowrap">
           <input class="form-control w-100" type="search"
           placeholder="Search" aria-label="Search">
