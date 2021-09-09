@@ -19,14 +19,13 @@ class register {
        else {
 
         require "../App/Model/register_check.php";
-            if ( nickname_unique($name) == false ) {
+            if ( nickname_unique($name) === false ) {
                 echo "mauvais identifiant";
             }
             else {
                 if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
                     require "../App/Model/insert_data.php";
-                    insert($email,$name,$password,$signature);
-                    echo "lol";
+                    insert($mail,$name,$password,$signature);
                 }
                 else {
                     echo "{$mail}: Not a valid email"."<br>";
