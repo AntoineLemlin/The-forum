@@ -18,15 +18,13 @@ class register {
        }
        else {
 
-        require "../Model/nickname_check.php";
-        $nickName_final = nickname_unique($name) ;
-    
-            if ( $nickName_final == false ) {
+        require "../App/Model/register_check.php";
+            if ( nickname_unique($name) == false ) {
                 echo "mauvais identifiant";
             }
             else {
                 if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                    require "../Model/insert_data.php";
+                    require "../App/Model/insert_data.php";
                     insert($email,$name,$password,$signature);
                     echo "lol";
                 }
@@ -43,14 +41,14 @@ class register {
 }
 
 if(isset($_POST["register"])){
-$email = $_POST['email']; 
-echo $email;
-$nickname= $_POST['username']; 
-$password = $_POST['password']; 
-$signature = $_POST['signature'];
-$appel = new register ();
+    $email = $_POST['email']; 
+    echo $email;
+    $nickname= $_POST['username']; 
+    $password = $_POST['password']; 
+    $signature = $_POST['signature'];
+    $appel = new register ();
 
-$appel -> ValidateNickname($nickname,$email,$password,$signature);  
+    $appel -> ValidateNickname($nickname,$email,$password,$signature);  
 }
 
 

@@ -25,6 +25,7 @@
 
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
+  require_once("../App/Controller/register.php");
  ?>
 
   <body class="bg-light">
