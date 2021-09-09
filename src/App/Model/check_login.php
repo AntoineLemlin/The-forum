@@ -17,7 +17,8 @@ class Check_Login{
         if($statement->rowCount() > 0){
             $username_result = $statement->fetch(PDO::FETCH_ASSOC);
             if(password_verify($password, $username_result['Password'])){
-                $_SESSION['username'] = $username;
+                $_SESSION['username'] = $username_result['Nickname'];
+                $_SESSION['email'] = $username_result['Email'];
                 echo "Successfully Login";
             }
         }

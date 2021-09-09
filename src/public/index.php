@@ -458,6 +458,7 @@
           </div>
         
         <div class="col-md-3 col-lg-3 px-5 ">
+          <?php include("../App/View/reduced_profile.php"); ?>
           <!-- Search Bar -->
          <form id="search-bar" class="form-inline flex-nowrap">
           <input class="form-control w-100" type="search"
