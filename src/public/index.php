@@ -67,8 +67,7 @@
     <ol class="breadcrumb bread-style align-text-bottom">
       <li class="breadcrumb-item bread-item">
         <a href="#" class="text-decoration-none text-dark"
-          ><i class="fas fa-home"></i>Home</a
-        >
+          ><i class="fas fa-home"></i>Home</a>
       </li>
       <li class="breadcrumb-item bread-item active" aria-current="page">
         Board index
