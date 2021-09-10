@@ -101,10 +101,7 @@
       <label class="h3 mr-5" for="pet-select">Choose a board:</label>
         <select class="form-select h3" aria-label=".form-select-lg example" name="board-name" id="board-name" required>
             <option value="">--Please choose a Board--</option>
-            <option value="general">General</option>
-            <option value="development">Development</option>
-            <option value="smalltalk">SmallTalk</option>
-            <option value="events">Events</option>
+            <?php require("../App/View/display_select_board.php");?>
         </select>  
     </div>
       <button id="submit" type="submit" name="add-topic" class="btn btn-primary mt-5 w-25 h2">Submit</button>
