@@ -11,6 +11,8 @@ if(isset($_POST["login"])){
         
         $user_checkin -> match_username($username, $password);
 
+        require_once("../App/Model/insert_data.php");
+        LastActive($username);
 
     }
     else{

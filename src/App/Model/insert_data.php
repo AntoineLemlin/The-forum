@@ -31,6 +31,24 @@ function insert ($email,$nickname,$password,$signature)  {
 }
 
 
+function LastActive($username){
+        require "db_connect.php";
+
+        date_default_timezone_set('Europe/Amsterdam');
+        $date = date("Y-m-d H:i:s"); 
+
+   $sql = "UPDATE Users SET Last_Active='". $date ."' WHERE Nickname='" . $username . "'";
+
+
+    $stmt = $conn->prepare($sql);
+
+    $stmt->execute();
+
+}
+
+?>
+
+
 
  
  

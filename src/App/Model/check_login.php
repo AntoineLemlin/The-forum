@@ -25,11 +25,10 @@ class Check_Login{
         else{
             echo "Try again";
         }
+    }
+
 
     
-
-
-    }
 }
 
 
