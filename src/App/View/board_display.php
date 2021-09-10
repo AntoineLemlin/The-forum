@@ -28,6 +28,9 @@ foreach($fetchedData as $board){
                   <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='date'>date</span><br>
                   Last post</li>
                 </ul>
+                <div class="card-footer text-center">
+                  <a  href="topics.php?board=<?php echo $board['Name']; ?>"><button type="button" class ="btn btn-info" >  click </button> </a>
+                </div>
               </div>
             </div>
 <?php
