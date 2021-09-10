@@ -275,4 +275,33 @@ header nav .navbar-toggler-icon {
   overflow: hidden;
   border-radius: 15px;
 }
+
+.connected, .absent, .disconnected {
+  position: relative;
+}
+
+.connected::before, .absent::before, .disconnected::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.connected::before {
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.absent::before {
+  background-color: orange;
+  border: 2px solid orangered;
+}
+
+.disconnected::before {
+  background-color: lightcoral;
+  border: 2px solid red;
+}
 /*# sourceMappingURL=style.css.map */

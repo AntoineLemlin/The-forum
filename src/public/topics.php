@@ -287,27 +287,7 @@
               </thead>
               <tbody class="bg-light">
                 <tr class="d-flex justify-content-center flex-wrap">
-                  <td id="last-active-card" class="card my-3 mx-1">
-                    <div class="card-body d-flex flex-column">
-                      <img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" class="rounded-circle mb-1" alt="147140">
-                      <h5 class="card-title text-center">#Ricky2103</h5>
-                      <p class="card-text text-center">Here to help!</p>
-                    </div>
-                  </td>
-                  <td id="last-active-card" class="card my-3 mx-1">
-                    <div class="card-body d-flex justify-content-center flex-column">
-                      <img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" class="rounded-circle mb-1" alt="147140">
-                      <h5 class="card-title text-center">#Ricky2103</h5>
-                      <p class="card-text text-center">Here to help!</p>
-                    </div>
-                  </td>
-                  <td id="last-active-card" class="card my-3 mx-1">
-                    <div class="card-body d-flex justify-content-center flex-column">
-                      <img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" class="rounded-circle mb-1" alt="147140">
-                      <h5 class="card-title text-center">#Ricky2103</h5>
-                      <p class="card-text text-center">Here to help!</p>
-                    </div>
-                  </td>
+                <?php require("../App/View/last_active_display.php"); ?>
                 </tr>
               </tbody>
             </table>
