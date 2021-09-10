@@ -16,14 +16,38 @@
   require_once("../App/Controller/register.php");
  ?>
 <body class="bg-light">
-  <header id="header-id">
-    <div class="" style="background: center/cover url('https://cdn.pixabay.com/photo/2016/07/29/19/19/railway-1555348_960_720.jpg');">
-      <div class="container-fluid p-5 text-center">
-        <nav class="navbar navbar-expand-md navbar-light">
-          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"></div>
-          <div class="mx-auto order-0"></div>
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
+    <header id="header-id">
+      <div
+        class=""
+        style="
+          background: center/cover
+            url('https://cdn.pixabay.com/photo/2016/07/29/19/19/railway-1555348_960_720.jpg');
+        "
+      >
+        <div class="container-fluid p-5 text-center">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <div
+              class="
+                navbar-collapse
+                collapse
+                w-100
+                order-1 order-md-0
+                dual-collapse2
+              "
+            >
+            </div>
+            <div class="mx-auto order-0">
+              <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-toggle="collapse"
+                data-target=".dual-collapse2"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+              <ul class="navbar-nav ml-auto">
               <?php include("../App/View/header_display.php");?>
               <li class="nav-item"><?php require_once("../App/View/logout_message.php");?></li>
             </ul>
@@ -32,31 +56,45 @@
         <h1 id="title" class="display-4">Tracker</h1>
       </div>
     </div>
-  </header>
-  <main class="mx-5">
-    <div class="container-fluid" id="main-container">
-      <div class="container-fluid" id="breadcrumb">
-        <nav class="" aria-label="breadcrumb">
-          <ol class="breadcrumb bread-style align-text-bottom">
-            <li class="breadcrumb-item bread-item">
-              <a href="#" class="text-decoration-none text-dark">Home</a>
-            </li>
-            <li class="breadcrumb-item bread-item active" aria-current="page">Board index</li>
-          </ol>
-        </nav>
+    </header>
+
+<main class="mx-5">
+
+
+  <div class="container-fluid" id="main-container">
+  <div class="container-fluid" id="breadcrumb">
+  <nav class="" aria-label="breadcrumb">
+    <ol class="breadcrumb bread-style align-text-bottom">
+      <li class="breadcrumb-item bread-item">
+        <a href="#" class="text-decoration-none text-dark"
+          ><i class="fas fa-home"></i>Home</a
+        >
+      </li>
+      <li class="breadcrumb-item bread-item active" aria-current="page">
+        Board index
+      </li>
+    </ol>
+  </nav>
       </div>
       <div class="row">
         <div class="col-md-9 col-sm col-lg-9">
-          <h1 class="p-5">Category One</h1>
           <div class="container pt-5 bg-light d-flex flex-wrap">
             <?php require("../App/View/board_display.php");?>
           </div>
         </div>
         <div class="col-md-3 col-lg-3 px-5">
-          <?php include("../App/View/reduced_profile.php"); ?><!-- Search Bar -->
-          <form id="search-bar" class="form-inline flex-nowrap" name="search-bar">
-            <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
-          </form>
+          <?php include("../App/View/reduced_profile.php"); ?>
+           <!-- Search Bar -->
+         <form id="search-bar" class="form-inline flex-nowrap">
+          <input class="form-control w-100" type="search"
+          placeholder="Search" aria-label="Search">
+          <button class="btn btn-
+          info" type="submit"><i class="fas fa-search"></i>
+        </button>
+        <button class="btn btn-
+          info" type="submit"><i class="fas fa-cog"></i>
+        </button>
+          </form> 
           <hr>
           <?php include("../App/View/form_display.php") ?>
           <div class="table-responsive mt-5">
@@ -159,29 +197,15 @@
     </div>
   </main>
   <footer>
-    <div class="container-fluid" id="social-media">
-      <ul class="d-flex justify-content-center py-5 flex-wrap">
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>
-        <li class="p-3 mr-4">
-          <a href="#"></a>
-        </li>.
+  <div class="container-fluid" id="social-media">
+        <ul class="d-flex justify-content-center py-5 flex-wrap">
+            <li class="p-3 mr-4"><a href="#"><i class="fab fa-instagram text-white"></i></a></li>
+        <li class="p-3 mr-4"><a href="#"><i class="fab fa-facebook-f text-white"></i></a></li>
+        <li class="p-3 mr-4"><a href="#"><i class="fab fa-apple text-white"></i></a></li>
+        <li class="p-3 mr-4"><a href="#"><i class="fab fa-twitter text-white"></i></a></li>
+        <li class="p-3 mr-4"><a href="#"><i class="fab fa-youtube text-white"></i></a></li>
+        <li class="p-3 mr-4"><a href="#"><i class="fab fa-github text-white"></i></a></li>
+        <li class="p-3 mr-4"><a href="#"><i class="fab fa-whatsapp text-white"></i></a></li>
       </ul>
     </div>
     <div class="container-fluid bg-dark my-n3">

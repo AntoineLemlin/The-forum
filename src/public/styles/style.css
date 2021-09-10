@@ -135,16 +135,11 @@ header nav .navbar-toggler-icon {
 }
 
 .card {
-  width: 25rem;
-  height: 12rem;
+  width: 30rem;
 }
 
 .card .list-group-item {
   font-size: 0.5rem;
-}
-
-.card .card-text {
-  font-size: 0.75rem;
 }
 
 .card .container {
