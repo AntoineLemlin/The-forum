@@ -15,7 +15,7 @@ foreach($fetchedData as $board){
                   <div class='col-9 p-0'>
                     <div class="card-body p-0">
                       <h4 class="card-title"><?php echo $board['Name']; ?></h4>
-                      <p class="card-text description" style="font-size: 1.2rem;">This forum is also locked, but at least there aren't any unread posts</p>
+                      <p class="card-text description" style="font-size: 1.2rem;"><?php echo $board['Description']; ?></p>
                     </div>
                   </div>
                 </div>

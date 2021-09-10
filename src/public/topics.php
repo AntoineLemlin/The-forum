@@ -88,101 +88,139 @@
             <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
                 <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href="#">New Topic</a>
-                <form id="search-bar" class="form-inline flex-nowrap" name="search-bar">
-                  <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
-                </form>
+                <form id="search-bar" class="form-inline flex-nowrap">
+              <input class="form-control w-100" type="search"
+              placeholder="Search" aria-label="Search">
+              <button class="btn btn-
+              info" type="submit"><i class="fas fa-search"></i>
+            </button>
+            <button class="btn btn-
+              info" type="submit"><i class="fas fa-cog"></i>
+            </button>
+              </form> 
               </div>
             </div>
             <div id="announcement" class="row table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <td class="h3">Announcements</td>
-                    <td class="h3"></td>
-                    <td class="h3"></td>
-                    <td class="h3"></td>
-                    <td class="h3"></td>
-                  </tr>
-                </thead>
-                <tbody class="bg-light">
-                  <tr class="">
-                    <td class="d-flex h2 align-items-center">
-                      <div class="text flex-column">
-                        <h4>This is a global announcement!</h4>
-                        <h5>by Carla &gt; in Unread Forum</h5>
-                      </div>
-                    </td>
-                    <td class="h4"></td>
-                    <td class="m-3">
-                      <h4 class="text-muted">203</h4>
-                    </td>
-                    <td class="m-3">
-                      <h4 class="text-muted">5078</h4>
-                    </td>
-                    <td class="d-flex h4 flex-column">
-                      <h4>by Carla</h4>
-                      <h5>Sun Oct 09, 2016 5:58 pm</h5>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div id="topics" class="row table-responsive mt-5">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <td class="h3">Topics</td>
-                    <td class="h3"></td>
-                    <td class="h3"></td>
-                    <td class="h3"></td>
-                    <td class="h3"></td>
-                  </tr>
-                </thead>
-                <tbody class="bg-light">
-                  <tr class="">
-                    <td class="d-flex h2 align-items-center">
-                      <div class="text flex-column">
-                        <h4>Topics Unread (Mine)</h4>
-                        <h5>by PlanetStyles</h5>
-                      </div>
-                    </td>
-                    <td class="h4"></td>
-                    <td class="m-3">
-                      <h4 class="text-muted">716</h4>
-                    </td>
-                    <td class="m-3">
-                      <h4 class="text-muted">1951</h4>
-                    </td>
-                    <td class="d-flex h4 flex-column">
-                      <h4>by PlanetStyles</h4>
-                      <h5>Sun Oct 09, 2016 6:27 pm</h5>
-                    </td>
-                  </tr>
-                  <tr class="">
-                    <td class="d-flex h2 align-items-center">
-                      <div class="text flex-column">
-                        <h4>Topics Unread (Mine)</h4>
-                        <h5>by PlanetStyles</h5>
-                      </div>
-                    </td>
-                    <td class="h4"></td>
-                    <td class="m-3">
-                      <h4 class="text-muted">716</h4>
-                    </td>
-                    <td class="m-3">
-                      <h4 class="text-muted">1951</h4>
-                    </td>
-                    <td class="d-flex h4 flex-column">
-                      <h4>by PlanetStyles</h4>
-                      <h5>Sun Oct 09, 2016 6:27 pm</h5>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+      <table class="table">
+          <thead>
+              <tr>
+                  <td class="h3">Announcements</td>
+                  <td class="h3"></td>
+                  <td class="h3"><i class="fas fa-comments"></i></td>
+                  <td class="h3"><i class="fas fa-eye"></i></td>
+                  <td class="h3"><i class="fas fa-clock"></i></td>
+              </tr>
+          </thead>
+          <tbody class="bg-light">
+              <tr class="">
+                  <td class="d-flex h2 align-items-center">
+                    <i class="fas fa-bullhorn mr-5 p-3 border rounded-circle"></i>
+                    <div class="text flex-column">
+                        <h4>This is a global announcement!</h3>
+                        <h5>by Carla > in Unread Forum</h4>
+                    </div>
+
+                  </td>
+
+                  <td class=" h4">
+                    <i class="fas fa-bullhorn"></i>  
+                  </td>
+
+                  <td class="m-3">
+                    <h4 class="text-muted">203</h4>
+                  </td>
+
+                  <td class="m-3">
+                    <h4 class="text-muted">5078</h4>
+                  </td>
+
+                  <td class="d-flex h4 flex-column">
+                        <h4>by Carla <i class="fas fa-external-link-square-alt ml-3"></i></h4>
+                        <h5>Sun Oct 09, 2016 5:58 pm</h4>
+
+                  </td>
+              </tr>
+          </tbody>
+
+      </table>
+  </div>
+  <div id="topics" class="row table-responsive mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <td class="h3">Topics</td>
+                <td class="h3"></td>
+                <td class="h3"><i class="fas fa-comments"></i></td>
+                <td class="h3"><i class="fas fa-eye"></i></td>
+                <td class="h3"><i class="fas fa-clock"></i></td>
+            </tr>
+        </thead>
+        <tbody class="bg-light">
+            <tr class="">
+                <td class="d-flex h2 align-items-center">
+                  <i class="fas fa-check mr-5 p-3 text-success border border-success rounded-circle"></i>
+                  <div class="text flex-column">
+                      <h4>Topics Unread (Mine)</h3>
+                      <h5>by PlanetStyles</h4>
+                  </div>
+
+                </td>
+
+                <td class=" h4">
+
+                </td>
+
+                <td class="m-3">
+                  <h4 class="text-muted">716</h4>
+                </td>
+
+                <td class="m-3">
+                  <h4 class="text-muted">1951</h4>
+                </td>
+
+                <td class="d-flex h4 flex-column">
+                      <h4>by PlanetStyles <i class="fas fa-external-link-square-alt ml-3"></i></h4>
+                      <h5>Sun Oct 09, 2016 6:27 pm</h4>
+
+                </td>
+            </tr>
+            <tr class="">
+                <td class="d-flex h2 align-items-center">
+                  <i class="fas fa-times border-danger text-danger mr-5 p-3 border rounded-circle"></i>
+                  <div class="text flex-column">
+                      <h4>Topics Unread (Mine)</h3>
+                      <h5>by PlanetStyles</h4>
+                  </div>
+
+                </td>
+
+                <td class=" h4">
+                    <i class="fas fa-lock"></i>
+                </td>
+
+                <td class="m-3">
+                  <h4 class="text-muted">716</h4>
+                </td>
+
+                <td class="m-3">
+                  <h4 class="text-muted">1951</h4>
+                </td>
+    </div>
+
+                <td class="d-flex h4 flex-column">
+                      <h4>by PlanetStyles <i class="fas fa-external-link-square-alt ml-3"></i></h4>
+                      <h5>Sun Oct 09, 2016 6:27 pm</h4>
+
+                </td>
+            </tr>
+        </tbody>
+<main class="mx-5">
+
+    </table>
+</div>
             <div class="row">
               <div class="col-12 mt-5 d-flex">
-                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href="#">New Topic</a> <a id="topic-filter" class="h4 mr-5 text-dark rounded border border-dark bg-light p-3" href="#"></a>
+                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3 d-flex align-items-center" href="#">New Topic</a> <a id="topic-filter" class="h4 mr-5 text-dark rounded border border-dark bg-light p-3" href="#"><i class="fas fa-sort-amount-down h2"></i></a>
                 <ul class="d-flex align-items-center h3 ml-auto">
                   <li class="list-unstyled">12 topics</li>
                   <li class="ml-5">Page 1 of 1</li>
