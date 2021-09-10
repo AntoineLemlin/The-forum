@@ -5,6 +5,7 @@ require("../App/Model/board_fetch.php");
 $fetchedData = fetchBoard();
 
 foreach($fetchedData as $board){
+   
 ?>
 
           
@@ -14,8 +15,13 @@ foreach($fetchedData as $board){
                   <div class='col-3 p-0'><img class="rounded-circle z-depth-2" alt="20x20" src="data:image/jpeg;base64,<?php echo base64_encode( $board['Image'])?>" data-holder-rendered="true" style="width: 4rem; height:4rem;"></div>
                   <div class='col-9 p-0'>
                     <div class="card-body p-0">
+<<<<<<< HEAD
+                      <h5 class="card-title"><?php echo $board['Name']; ?></h5>
+                      <p class="card-text"> <?php echo $board['Description'] ?> </p>
+=======
                       <h4 class="card-title"><?php echo $board['Name']; ?></h4>
                       <p class="card-text description" style="font-size: 1.2rem;"><?php echo $board['Description']; ?></p>
+>>>>>>> 9921b061f987ff43ab913472b821f7d472df61da
                     </div>
                   </div>
                 </div>

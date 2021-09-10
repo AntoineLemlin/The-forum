@@ -87,17 +87,11 @@
             </div>
             <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
-                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href="#">New Topic</a>
-                <form id="search-bar" class="form-inline flex-nowrap">
-              <input class="form-control w-100" type="search"
-              placeholder="Search" aria-label="Search">
-              <button class="btn btn-
-              info" type="submit"><i class="fas fa-search"></i>
-            </button>
-            <button class="btn btn-
-              info" type="submit"><i class="fas fa-cog"></i>
-            </button>
-              </form> 
+                <?php  require("../App/Controller/topics_create.php")     ?>
+                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href='topics.php?name=true'>New Topic</a>
+                <form id="search-bar" class="form-inline flex-nowrap" name="search-bar">
+                  <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                </form>
               </div>
             </div>
             <div id="announcement" class="row table-responsive">
