@@ -29,7 +29,7 @@ foreach($fetchedData as $board){
                   Last post</li>
                 </ul>
                 <div class="card-footer text-center">
-                  <a  href="topics.php?name=<?php echo $board['Name']; ?>"><button type="button" class ="btn btn-info" >  click </button> </a>
+                  <a  href="topics.php?board=<?php echo $board['Name']; ?>"><button type="button" class ="btn btn-info" >  click </button> </a>
                 </div>
               </div>
             </div>

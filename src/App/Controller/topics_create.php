@@ -10,7 +10,7 @@ function myFunction() {
 
 
 
-if (isset($_GET['name'])) {
+if (isset($_GET['name']) === true) {
     if(empty($_SESSION['username'])) {
         myFunction();
     }
