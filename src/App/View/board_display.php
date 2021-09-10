@@ -1,11 +1,11 @@
 <?php 
 
-require("../Model/board_fetch.php");
+require("../App/Model/board_fetch.php");
 
 $fetchedData = fetchBoard();
 
 foreach($fetchedData as $board){
-    print_r($board);
+   
 ?>
 
           
@@ -15,7 +15,7 @@ foreach($fetchedData as $board){
                   <div class='col-3 p-0'><img class="rounded-circle z-depth-2" alt="20x20" src="" data-holder-rendered="true" style="width: 4rem;"></div>
                   <div class='col-9 p-0'>
                     <div class="card-body p-0">
-                      <h5 class="card-title"><?php $board['Name']; ?></h5>
+                      <h5 class="card-title"><?php echo $board['Name']; ?></h5>
                       <p class="card-text">This forum is also locked, but at least there aren't any unread posts</p>
                     </div>
                   </div>
