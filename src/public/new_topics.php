@@ -14,6 +14,7 @@
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
+  require ("../App/Controller/check_topic.php");
  ?>
 <body class="bg-light">
     <header id="header-id">
