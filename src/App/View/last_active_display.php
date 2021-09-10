@@ -5,9 +5,7 @@ require("../App/Model/fetch_lastActive.php");
 $fetchedData = fetchLastActive();
 
 $curr_time=new DateTime();
-$curr_time->setTimezone(new DateTimeZone('Europe/Brussels'));
-
-
+$curr_time->setTimezone(new DateTimeZone('Europe/Amsterdam'));
 for($i=0;$i<3;$i++){
     $time = new DateTime($fetchedData[$i]['Last_Active']);
     $difference=$time->diff($curr_time);
@@ -19,10 +17,10 @@ for($i=0;$i<3;$i++){
         if($difference < "5"){
             echo " connected";
         }
-        else if($difference > "5" && $difference < "15"){
+        if($difference > "5" && $difference < "15"){
             echo " absent";
         }
-        else if($difference > "15"){
+        if($difference > "15"){
             echo " disconnected";
         }
         ?>">
