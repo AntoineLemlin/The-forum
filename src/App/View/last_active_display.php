@@ -4,23 +4,24 @@ require("../App/Model/fetch_lastActive.php");
 
 $fetchedData = fetchLastActive();
 
-$curr_time=new DateTime();
-$curr_time->setTimezone(new DateTimeZone('Europe/Amsterdam'));
+date_default_timezone_set('Europe/Brussels');
+$time1=new DateTime();
 for($i=0;$i<3;$i++){
-    $time = new DateTime($fetchedData[$i]['Last_Active']);
-    $difference=$time->diff($curr_time);
+    $time2 = new DateTime($fetchedData[$i]['Last_Active']);
+    $difference=$time2->diff($time1);
 
-    $difference = $difference->format('%i');
+     $difference = $difference-> format("%H:%i:%s");
+     
     ?>
     <td id="last-active-card" class="card my-3 mx-1">
         <div id="last-pic" class="card-body d-flex flex-column<?php 
-        if($difference < "5"){
+        if(strtotime($difference) < strtotime("00:05:00")){
             echo " connected";
         }
-        if($difference > "5" && $difference < "15"){
+        if(strtotime($difference) > strtotime("00:05:00") && strtotime($difference) < strtotime("00:15:00")){
             echo " absent";
         }
-        if($difference > "15"){
+        if(strtotime($difference) > strtotime("00:15:00")){
             echo " disconnected";
         }
         ?>">
