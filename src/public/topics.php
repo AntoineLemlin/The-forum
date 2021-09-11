@@ -14,6 +14,7 @@
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
+  require ("../App/View/print_topic.php");
  ?>
 <body class="bg-light">
     <header id="header-id">
@@ -150,34 +151,7 @@
             </tr>
         </thead>
         <tbody class="bg-light">
-            <tr class="">
-                <td class="d-flex h2 align-items-center">
-                  <i class="fas fa-check mr-5 p-3 text-success border border-success rounded-circle"></i>
-                  <div class="text flex-column">
-                      <h4>Topics Unread (Mine)</h3>
-                      <h5>by PlanetStyles</h4>
-                  </div>
-
-                </td>
-
-                <td class=" h4">
-
-                </td>
-
-                <td class="m-3">
-                  <h4 class="text-muted">716</h4>
-                </td>
-
-                <td class="m-3">
-                  <h4 class="text-muted">1951</h4>
-                </td>
-
-                <td class="d-flex h4 flex-column">
-                      <h4>by PlanetStyles <i class="fas fa-external-link-square-alt ml-3"></i></h4>
-                      <h5>Sun Oct 09, 2016 6:27 pm</h4>
-
-                </td>
-            </tr>
+           
             <tr class="">
                 <td class="d-flex h2 align-items-center">
                   <i class="fas fa-times border-danger text-danger mr-5 p-3 border rounded-circle"></i>
@@ -337,6 +311,7 @@
         </div>
       </div>
     </div>
+    
   </main>
   <footer>
   <div class="container-fluid" id="social-media">
