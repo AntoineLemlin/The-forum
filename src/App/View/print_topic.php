@@ -13,7 +13,7 @@ foreach ($topic as $top ) {
  
               <tr class="">
                   <td class="d-flex h2 align-items-center">
-                    <i class="fas fa-bullhorn mr-5 p-3 border rounded-circle"></i>
+                    <i class="fas fa-folder mr-5 p-3 border rounded-circle"></i>
                     <div class="text flex-column">
                         <h4><?php echo $top['Title'] ?></h3>
                         <h5><?php echo 'By '. $top['Nickname'] ?></h4>
@@ -22,7 +22,7 @@ foreach ($topic as $top ) {
                   </td>
 
                   <td class=" h4">
-                    <i class="fas fa-bullhorn"></i>  
+                    <i class="fas fa-folder"></i>  
                   </td>
 
                   <td class="m-3">
