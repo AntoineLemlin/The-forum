@@ -101,7 +101,9 @@
           <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
 
-                <a id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="new_topics.php">Post-Reply <i class="fas fa-reply"></i></a>
+              <form action="" method="POST">
+                <button type="submit" name="post-reply" id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="#">Post-Reply <i class="fas fa-reply"></i></button>
+             </form>
                 
                 <div class="dropdown mr-5 pr-3">
                   <button class="btn btn-secondary dropdown-toggle rounded-pill  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -142,18 +144,7 @@
           </div>
 
           <div class="row">
-            <div class="col-12">
-        <h2 class="text-center mt-5 bg-primary rounded border border-dark p-3 text-white">New comment</h2>
-      <form method="POST" id="add-topic">
-        <div class="form-group">
-          <textarea type="text" name="comment" class="form-control" rows="5" id="content" placeholder="Content" required></textarea>
-        </div>
-        <div class="d-flex justify-content-center">
-          <button id="submit" type="submit" name="add-comment" class="btn btn-primary mt-5 w-25 h2">Submit</button>
-
-        </div>
-      </form>
-      </div>
+          <?php require("../App/View/display_comment_form.php");?>
 
           </div>
           
@@ -167,8 +158,9 @@
 <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
 
-                <a id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="new_topics.php">Post-Reply <i class="fas fa-reply"></i></a>
-                
+              <form action="" method="POST">
+                <button type="submit" name="post-reply" id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="#">Post-Reply <i class="fas fa-reply"></i></button>
+             </form>                
                 <div class="dropdown mr-5 pr-3">
                   <button class="btn btn-secondary dropdown-toggle rounded-pill  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-wrench p-0"></i>
