@@ -14,7 +14,7 @@
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
-  require ("../App/View/print_topic.php");
+  
  ?>
 <body class="bg-light">
     <header id="header-id">
@@ -88,8 +88,8 @@
             </div>
             <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
-                <?php  require("../App/Controller/topics_create.php")     ?>
-                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href='topics.php?name=true'>New Topic</a>
+
+                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href="new_topics.php">New Topic</a>
                 <form id="search-bar" class="form-inline flex-nowrap" name="search-bar">
                   <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
                 </form>
@@ -150,38 +150,12 @@
                 <td class="h3"><i class="fas fa-clock"></i></td>
             </tr>
         </thead>
-        <tbody class="bg-light">
+
+        
+         <tbody class="bg-light">
            
-            <tr class="">
-                <td class="d-flex h2 align-items-center">
-                  <i class="fas fa-times border-danger text-danger mr-5 p-3 border rounded-circle"></i>
-                  <div class="text flex-column">
-                      <h4>Topics Unread (Mine)</h3>
-                      <h5>by PlanetStyles</h4>
-                  </div>
-
-                </td>
-
-                <td class=" h4">
-                    <i class="fas fa-lock"></i>
-                </td>
-
-                <td class="m-3">
-                  <h4 class="text-muted">716</h4>
-                </td>
-
-                <td class="m-3">
-                  <h4 class="text-muted">1951</h4>
-                </td>
-    </div>
-
-                <td class="d-flex h4 flex-column">
-                      <h4>by PlanetStyles <i class="fas fa-external-link-square-alt ml-3"></i></h4>
-                      <h5>Sun Oct 09, 2016 6:27 pm</h4>
-
-                </td>
-            </tr>
-        </tbody>
+         <?php  require_once ("../App/view/print_topic.php") ?>
+        </tbody> 
 <main class="mx-5">
 
     </table>

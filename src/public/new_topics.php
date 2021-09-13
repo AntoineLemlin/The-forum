@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require_once("../App/Controller/check_new_topic.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
   <title>Tracker</title>
 </head><?php
 
-  require_once("../App/Controller/check_session.php");
+  
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
   require ("../App/Controller/check_topic.php");
