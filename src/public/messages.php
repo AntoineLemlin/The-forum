@@ -74,6 +74,15 @@
       <li class="breadcrumb-item bread-item active" aria-current="page">
         Board index
       </li>
+      <li class="breadcrumb-item bread-item active" aria-current="page">
+        Category One
+      </li>
+      <li class="breadcrumb-item bread-item active" aria-current="page">
+        Top Icon Demos
+      </li>
+      <li class="breadcrumb-item bread-item active" aria-current="page">
+        Top Read (Hot)
+      </li>
     </ol>
   </nav>
       </div>
@@ -115,7 +124,7 @@
             </div>
             
               <div class="container">
-                <div class="row">
+                <div class="row mt-5">
                 <div class="col-3">
                   <div class ="img-modifier mb-2">
                     <img src="https://images.unsplash.com/photo-1515121061221-7d6ce2dcd1fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" >
@@ -130,20 +139,48 @@
                   <p class="user-id"> signature </p>
                 </div>
               </div>
-            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+        <h2 class="text-center mt-5 bg-primary rounded border border-dark p-3 text-white">New comment</h2>
+      <form method="POST" id="add-topic">
+        <div class="form-group">
+          <textarea type="text" name="comment" class="form-control" rows="5" id="content" placeholder="Content" required></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button id="submit" type="submit" name="add-comment" class="btn btn-primary mt-5 w-25 h2">Submit</button>
+
+        </div>
+      </form>
+      </div>
+
+          </div>
+          
            
   <div id="topics" class="row table-responsive mt-5">
     <table class="table">
      
 
-        
-
-<main class="mx-5">
-
     </table>
 </div>
-            <div class="row">
-              
+<div class="row">
+              <div class="col-12 d-flex align-items-center justify-content-start m-4">
+
+                <a id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="new_topics.php">Post-Reply <i class="fas fa-reply"></i></a>
+                
+                <div class="dropdown mr-5 pr-3">
+                  <button class="btn btn-secondary dropdown-toggle rounded-pill  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-wrench p-0"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+
+              </div>
             </div>
             <div class="row">
               <div class="col-12 mt-5 d-flex">
