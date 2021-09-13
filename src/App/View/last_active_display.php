@@ -15,13 +15,13 @@ for($i=0;$i<3;$i++){
     ?>
     <td id="last-active-card" class="card my-3 mx-1">
         <div id="last-pic" class="card-body d-flex flex-column<?php 
-        if(strtotime($difference) < strtotime("00:05:00")){
+        if(strtotime($difference) < strtotime("00:02:00")){
             echo " connected";
         }
         if(strtotime($difference) > strtotime("00:05:00") && strtotime($difference) < strtotime("00:15:00")){
             echo " absent";
         }
-        if(strtotime($difference) > strtotime("00:15:00")){
+        if(strtotime($difference) > strtotime("00:10:00")){
             echo " disconnected";
         }
         ?>">
