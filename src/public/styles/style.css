@@ -192,7 +192,10 @@ header nav .navbar-toggler-icon {
   height: inherit;
 }
 
-.col-9 p {
+.col-9 .user-id {
+  font-size: 1rem;
+}
+.col-9 .user-id i {
   font-size: 1rem;
 }
 
