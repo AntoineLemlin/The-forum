@@ -18,7 +18,7 @@ for($i=0;$i<3;$i++){
         if(strtotime($difference) < strtotime("00:02:00")){
             echo " connected";
         }
-        if(strtotime($difference) > strtotime("00:05:00") && strtotime($difference) < strtotime("00:15:00")){
+        if(strtotime($difference) > strtotime("00:02:00") && strtotime($difference) < strtotime("00:10:00")){
             echo " absent";
         }
         if(strtotime($difference) > strtotime("00:10:00")){
