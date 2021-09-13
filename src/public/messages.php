@@ -116,14 +116,14 @@
             <div class="row">
               <div class="container">
                 <div class="col-3">
-                  <div class ="img-modifier">
-                    <img src="" alt="">
+                  <div class ="img-modifier mb-2">
+                    <img src="https://images.unsplash.com/photo-1515121061221-7d6ce2dcd1fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" >
                   </div>
                   <h6>Nom de l'utilisateur</h6>
-                  <p class="user-id"><strong>Posts:</strong>45</p>
+                  <p class="user-id"><strong>Posts: </strong>45</p>
                 </div>
                 <div class="col-9">
-
+                  <p class="user-id">2:04 9/13/2021</p>
                 </div>
               </div>
             </div>
