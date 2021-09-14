@@ -7,7 +7,12 @@ if(isset($_POST['edit'])){
         $signature = $_POST['new-signature'];
         $confirm = $_POST['confirm-password'];
         $avatar = $_FILES['avatar']['tmp_name'];
-        $image = base64_encode(file_get_contents(addslashes($avatar)));
+        $image = $_SESSION['avatar'];
+
+        if(!empty($_FILES['avatar']['tmp_name']) && file_exists($_FILES['avatar']['tmp_name'])) {
+            $image = base64_encode(file_get_contents(addslashes($avatar)));
+        }
+       
 
 
         require("../App/Model/register_check.php");
@@ -20,7 +25,7 @@ if(isset($_POST['edit'])){
             if(changePassword($confirm) === true){
                 require_once("../App/Model/insert_data.php");
                 require_once("../App/Model/fetch_image.php");
-        
+              
                 edit($_SESSION['id'],$nickname, $signature, $image);
 
                 $fetchedData = fetchImage($_SESSION['username']);

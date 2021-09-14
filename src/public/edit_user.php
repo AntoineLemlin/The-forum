@@ -88,7 +88,7 @@ require_once("../App/View/check_image.php");
               <?php isImage($_SESSION['avatar'], "80", $_SESSION['email']) ?>
           <div class="form-group">
             <label for="exampleFormControlFile1">Example file input</label>
-            <input type="file" class="form-control-file form-control-lg" id="avatar" name="avatar">
+            <input value="<?php echo $_SESSION['avatar']; ?>" type="file" class="form-control-file form-control-lg" id="avatar" name="avatar">
         </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nickname</label>
