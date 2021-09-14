@@ -27,10 +27,20 @@ function modify_first_comment($topic_id,$Content){
     $stmt->BindParam(":Content",$Content);
     $stmt->execute();
 
-   
 
-    
+}
 
+function check_authorID ($topic_number){
+    require "db_connect.php";
+
+    $sql="Select Author_ID from Topics where Topic_Number=:Topic_Number";
+    $stmt=$conn->prepare($sql);
+    $stmt->BindParam(":Topic_Number",$topic_number);
+    $stmt->execute();
+
+    $topic_array=$stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $topic_array["Author_ID"];
 }
 
 
