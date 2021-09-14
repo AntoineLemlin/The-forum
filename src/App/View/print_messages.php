@@ -22,6 +22,9 @@ $list_messages=display_comments($topic_id);
                 <div class="col-9">
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?></p>
                   <p class="user-id mb-5"><?php echo $first_comment["Content"] ?> </p>
+                  <form action="POST"  id="modify-comment">
+                  <button id="submit" type="submit" name="submit-modifier" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+                  </form> 
                   <hr>
                   <p class="user-id"> <?php echo $first_comment["Signature"] ?> </p>
                 </div>
@@ -44,6 +47,9 @@ foreach($list_messages as $list){
                 <div class="col-9">
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?></p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
+                  <form action="POST"  id="modify-comment">
+                  <button id="submit" type="submit" name="submit-modifier" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+                  </form> 
                   <hr>
                   <p class="user-id"> <?php echo $list["Signature"] ?> </p>
                 </div>
