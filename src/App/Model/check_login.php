@@ -19,6 +19,7 @@ class Check_Login{
             if(password_verify($password, $username_result['Password'])){
                 $_SESSION['username'] = $username_result['Nickname'];
                 $_SESSION['email'] = $username_result['Email'];
+                $_SESSION['id'] = $username_result['Id'];
                 echo "Successfully Login";
             }
         }

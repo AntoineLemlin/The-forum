@@ -1,4 +1,6 @@
 <?php 
+    
+    if (isset ($_SESSION['username'])) {
     if(isset($_POST['post-reply'])){
 
 ?>
@@ -18,5 +20,5 @@
       </div>
 
 <?php
-    }
+    }}
 ?>
