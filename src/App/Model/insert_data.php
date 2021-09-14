@@ -1,6 +1,6 @@
 <?php
 
-function insert ($email,$nickname,$password,$signature)  {
+function insert($email,$nickname,$password,$signature)  {
   require "db_connect.php";
 
    $sql = "INSERT INTO Users (
@@ -30,6 +30,24 @@ function insert ($email,$nickname,$password,$signature)  {
 
 }
 
+function edit($id, $nickname,$signature,$avatar)  {
+        require "db_connect.php";
+      
+         $sql = "UPDATE `Users` SET `Nickname`=:nickname,`Signature`=:signature, `Avatar`=:avatar WHERE Id=:id";
+      
+      
+          $stmt = $conn->prepare($sql);
+      
+                      
+      
+          $stmt->bindParam(":nickname", $nickname);
+          $stmt->bindParam(":signature", $signature);
+          $stmt->bindParam(":id", $id);
+          $stmt->bindParam(":avatar", $avatar);
+      
+          $stmt->execute();
+      
+      }
 
 function LastActive($username){
         require "db_connect.php";

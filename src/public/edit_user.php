@@ -1,4 +1,10 @@
-<?php session_start();?>
+<?php session_start();
+require_once("../App/Controller/edit_controller.php");
+require_once("../App/Controller/check_edit_user.php");
+require_once("../App/View/check_image.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +20,6 @@
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
-  require_once("../App/View/check_image.php");
  ?>
 <body class="bg-light">
     <header id="header-id">
@@ -78,8 +83,29 @@
       </div>
       <div class="row">
         <div class="col-md-9 col-sm col-lg-9">
-          <div class="container pt-5 bg-light d-flex flex-wrap">
-            <?php require("../App/View/board_display.php");?>
+          <div class="container pt-5 bg-light d-flex flex-column">
+              <form class="d-flex flex-column justify-content-center align-items-center py-5" method="POST" enctype="multipart/form-data">
+              <?php isImage($_SESSION['avatar'], "80", $_SESSION['email']) ?>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file form-control-lg" id="avatar" name="avatar">
+        </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nickname</label>
+                    <input value="<?php echo $_SESSION['username']; ?>" name="new-nickname" type="text" class="form-control" id="nickname" aria-describedby="nickname" placeholder="Enter new nickname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Signature</label>
+                    <input value="<?php echo $_SESSION['signature']; ?>" name="new-signature" type="text" class="form-control" id="signature" placeholder="Enter new signature">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter to confirm password</label>
+                    <input name="confirm-password" type="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <button name="edit" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
           </div>
         </div>
         <div class="col-md-3 col-lg-3 px-5">
