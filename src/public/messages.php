@@ -126,7 +126,7 @@
             </div>
             
               <div class="container">
-               <?php require "../App/View/print_messages.php" ?>
+               <?php require("../App/View/print_messages.php") ?>
           </div>
 
           <div class="row">
