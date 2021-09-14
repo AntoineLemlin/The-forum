@@ -2,7 +2,9 @@
     
     if (isset ($_SESSION['username'])) {
     if(isset($_POST['post-reply'])){
-      $topic = $_GET['topic_number'];
+     
+
+    
 ?>
 
 <div class="col-12">
@@ -22,20 +24,7 @@
 <?php
     }}
 
-    require "../App/Model/add_comment.php";
-
-    if(isset($_POST['add-comment'])) {
-
-      date_default_timezone_set("Europe/Paris");
-      $topic = $_GET['topic_number'];
-      $author = $_SESSION['id'];
-      $content = $_POST['comment'];
-      $date = date("Y-m-d h:i:s"); 
-
-     add_comment($topic,$date,$author,$content) ;  
-     
-
-    }
+    
 
 
 ?>

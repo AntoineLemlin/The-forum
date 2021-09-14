@@ -1,4 +1,22 @@
-<?php session_start(); ?>
+<?php session_start(); 
+
+if(isset($_POST['add-comment'])) {
+  require "../App/Model/add_comment.php";
+  date_default_timezone_set("Europe/Paris");
+  $topic = $_GET['topic_number'];
+  $author = $_SESSION['id'];
+  $content = $_POST['comment'];
+  $date = date("Y-m-d h:i:s"); 
+
+ add_comment($topic,$date,$author,$content) ;  
+ header("Refresh:0");
+ exit;
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
