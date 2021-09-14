@@ -27,18 +27,12 @@ function modify_first_comment($topic_id,$Content){
     $stmt->BindParam(":Content",$Content);
     $stmt->execute();
 
-    $topic_array=$stmt->fetch(PDO::FETCH_ASSOC);
+   
 
-    return $topic_array;
+    
 
 }
 
-if (isset($_POST['submit-modifier']))
-{
-  $new_content=$_POST['first_comment'];
-  $topic_number=$_GET['topic_num'];
-  modify_first_comment($topic_number,$new_content);
-}
 
 
 

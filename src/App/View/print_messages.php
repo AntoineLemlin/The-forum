@@ -23,7 +23,7 @@ $list_messages=display_comments($topic_id);
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?></p>
                   <p class="user-id mb-5"><?php echo $first_comment["Content"] ?> </p>
                   <form method="POST" action="edit_comment.php?topic_num=<?Php echo $topic_id ?>"  id="modify-comment">
-                  <button id="submit" type="submit" name="submit-modifier" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+                  <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
                   </form> 
                   <hr>
                   <p class="user-id"> <?php echo $first_comment["Signature"] ?> </p>
