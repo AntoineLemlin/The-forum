@@ -32,6 +32,7 @@ if(isset($_POST['add-comment'])) {
   require_once("../App/Controller/check_session.php");
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
+  require_once("../App/View/check_image.php");
   
  ?>
 <body class="bg-light">

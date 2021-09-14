@@ -1,10 +1,4 @@
 <?php 
-
-
-
-
-
-
 if(isset($_POST["add-topic"])){
 
     $title= $_POST['title']; 

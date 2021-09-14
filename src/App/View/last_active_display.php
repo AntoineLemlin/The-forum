@@ -25,7 +25,9 @@ for($i=0;$i<3;$i++){
             echo " disconnected";
         }
         ?>">
-            <img src="https://secure.gravatar.com/avatar/<?php echo md5($fetchedData[$i]['Email']) ?> ?d=mp&size=80" class="rounded-circle mb-1" alt="147140">
+           <?php 
+            echo isImage($fetchedData[$i]['Avatar'], "60", $fetchedData[$i]['Email']);           
+           ?>
             <h5 class="card-title text-center"><?php echo $fetchedData[$i]['Nickname']; ?></h5>
             <p class="card-text text-center h6"><?php echo $fetchedData[$i]['Signature']; ?></p>
         </div>

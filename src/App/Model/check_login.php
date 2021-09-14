@@ -20,6 +20,8 @@ class Check_Login{
                 $_SESSION['username'] = $username_result['Nickname'];
                 $_SESSION['email'] = $username_result['Email'];
                 $_SESSION['id'] = $username_result['Id'];
+                $_SESSION['signature'] = $username_result['Signature'];
+                $_SESSION['avatar'] = $username_result['Avatar'];
                 echo "Successfully Login";
             }
         }
