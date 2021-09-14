@@ -3,13 +3,16 @@
 function first_comment($topic_number){
     require "db_connect.php";
     
-    $sql = "SELECT Content FROM Topics  where Topic_Number=:Topic_Number ";
+    $sql = "SELECT Email,Nickname,Creation_Date,Signature,Content 
+    FROM Topics inner join Users 
+    on Topics.Author_ID=Users.Id 
+    where :Topic_Number=$topic_number;  ";
     
     $stmt = $conn->prepare($sql);
     
     $stmt->BindParam(":Topic_Number",$topic_number);
     $stmt->execute();               
-    $topic_array = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $topic_array = $stmt -> fetchAll(PDO::FETCH_ASSOC);
     
     
     
