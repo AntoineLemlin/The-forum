@@ -97,15 +97,15 @@ require_once("../App/View/check_image.php");
         </div>
               <?php isImage($_SESSION['avatar'], "80", $_SESSION['email']) ?>
               <div class="form-group">
-            <label for="exampleFormControlFile1">Example file input</label>
+            <label for="avatar">Example file input</label>
             <input value="<?php echo $_SESSION['avatar']; ?>" type="file" class="form-control-file form-control-lg" id="avatar" name="avatar">
         </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nickname</label>
+                    <label for="nickname">Nickname</label>
                     <input value="<?php echo $_SESSION['username']; ?>" name="new-nickname" type="text" class="form-control" id="nickname" aria-describedby="nickname" placeholder="Enter new nickname">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Signature</label>
+                    <label for="signature">Signature</label>
                     <input value="<?php echo $_SESSION['signature']; ?>" name="new-signature" type="text" class="form-control" id="signature" placeholder="Enter new signature">
                 </div>
                 <div class="form-group mt-5">

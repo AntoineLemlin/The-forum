@@ -30,13 +30,12 @@ if(isset($_POST['edit'])){
                     $image = NULL;
                 }
                 edit($_SESSION['id'],$nickname, $signature, $image);
+                $_SESSION['username'] = $nickname;
 
                 $fetchedData = fetchImage($_SESSION['username']);
 
-    
-                $_SESSION['username'] = $nickname;
-                $_SESSION['signature'] = $signature;      
                 $_SESSION['avatar'] = $fetchedData['Avatar'];
+                $_SESSION['signature'] = $signature;      
             }else{
                 echo "nope";
             }
