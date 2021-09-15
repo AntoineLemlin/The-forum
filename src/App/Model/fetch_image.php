@@ -2,7 +2,7 @@
 
     function fetchImage($username){
         require("../App/Model/db_connect.php"); 
-        $sql = "SELECT * from Users where Nickname='" .$username. "'";
+        $sql = "SELECT Avatar from Users where Nickname='" .$username. "'";
         
 
         

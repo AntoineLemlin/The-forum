@@ -181,7 +181,7 @@ if(isset($_POST['add-comment'])) {
             </div>
             <div class="row">
               <div class="col-12 mt-5 d-flex">
-                <a id="return-board" class="h4 mr-5 text-dark p-3" href="#">&lt; Return to Board Index</a> <a id="jump-to" class="h4 mr-5 text-dark bg-light p-3 ml-auto" href="#">Jump to ^</a>
+                <a id="return-board" class="h4 mr-5 text-dark p-3" href="index.php">&lt; Return to Board Index</a> <a id="jump-to" class="h4 mr-5 text-dark bg-light p-3 ml-auto" href="#">Jump to ^</a>
               </div>
             </div>
           </div>

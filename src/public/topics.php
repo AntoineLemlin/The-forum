@@ -163,7 +163,7 @@
 </div>
             <div class="row">
               <div class="col-12 mt-5 d-flex">
-                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3 d-flex align-items-center" href="#">New Topic</a> <a id="topic-filter" class="h4 mr-5 text-dark rounded border border-dark bg-light p-3" href="#"><i class="fas fa-sort-amount-down h2"></i></a>
+                <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3 d-flex align-items-center" href="new_topics.php">New Topic</a> <a id="topic-filter" class="h4 mr-5 text-dark rounded border border-dark bg-light p-3" href="#"><i class="fas fa-sort-amount-down h2"></i></a>
                 <ul class="d-flex align-items-center h3 ml-auto">
                   <li class="list-unstyled">12 topics</li>
                   <li class="ml-5">Page 1 of 1</li>
@@ -172,7 +172,7 @@
             </div>
             <div class="row">
               <div class="col-12 mt-5 d-flex">
-                <a id="return-board" class="h4 mr-5 text-dark p-3" href="#">&lt; Return to Board Index</a> <a id="jump-to" class="h4 mr-5 text-dark bg-light p-3 ml-auto" href="#">Jump to ^</a>
+                <a id="return-board" class="h4 mr-5 text-dark p-3" href="index.php">&lt; Return to Board Index</a> <a id="jump-to" class="h4 mr-5 text-dark bg-light p-3 ml-auto" href="#">Jump to ^</a>
               </div>
             </div>
           </div>

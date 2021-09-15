@@ -26,10 +26,12 @@ if(isset($_POST['edit'])){
                 require_once("../App/Model/insert_data.php");
                 require_once("../App/Model/fetch_image.php");
               
+                if(isset($_POST['clear'])){
+                    $image = NULL;
+                }
                 edit($_SESSION['id'],$nickname, $signature, $image);
 
                 $fetchedData = fetchImage($_SESSION['username']);
-
 
     
                 $_SESSION['username'] = $nickname;
@@ -48,6 +50,7 @@ if(isset($_POST['edit'])){
 
 
 }
+
 
 
 
