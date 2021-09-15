@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+require_once '../App/Controller/check_topics_param.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,12 +71,19 @@
   <nav class="" aria-label="breadcrumb">
     <ol class="breadcrumb bread-style align-text-bottom">
       <li class="breadcrumb-item bread-item">
-        <a href="#" class="text-decoration-none text-dark"
+        <a href="index.php" class="text-decoration-none text-dark"
           ><i class="fas fa-home"></i>Home</a
         >
       </li>
-      <li class="breadcrumb-item bread-item active" aria-current="page">
-        Board index
+      <li class="breadcrumb-item bread-item">
+        <a href="#" class="text-decoration-none text-dark"
+          >Topics</a
+        >
+      </li>
+      <li class="breadcrumb-item bread-item active">
+        <a href="#" class="text-decoration-none text-dark"
+          ><?php echo $_GET['board'];?></a
+        >
       </li>
     </ol>
   </nav>

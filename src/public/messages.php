@@ -93,11 +93,13 @@ if(isset($_POST['add-comment'])) {
       <li class="breadcrumb-item bread-item active" aria-current="page">
         Board index
       </li>
-      <li class="breadcrumb-item bread-item active" aria-current="page">
-        Category One
+      <li class="breadcrumb-item bread-item">
+        <a href="topics.php?board=General" class="text-decoration-none text-dark"
+          >Topics</a
+        >
       </li>
-      <li class="breadcrumb-item bread-item active" aria-current="page">
-        Top Icon Demos
+      <li class="breadcrumb-item bread-item" aria-current="page">
+        Category
       </li>
       <li class="breadcrumb-item bread-item active" aria-current="page">
         Top Read (Hot)

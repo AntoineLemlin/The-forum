@@ -71,11 +71,17 @@ require_once("../App/View/check_image.php");
   <nav class="" aria-label="breadcrumb">
     <ol class="breadcrumb bread-style align-text-bottom">
       <li class="breadcrumb-item bread-item">
-        <a href="#" class="text-decoration-none text-dark"
+        <a href="index.php" class="text-decoration-none text-dark"
           ><i class="fas fa-home"></i>Home</a>
       </li>
       <li class="breadcrumb-item bread-item active" aria-current="page">
-        Board index
+      <a href="index.php" class="text-decoration-none text-dark"
+          >Board Index</a>
+      </li>
+      <li class="breadcrumb-item bread-item">
+        <a href="#" class="text-decoration-none text-dark"
+          >Edit User</a
+        >
       </li>
     </ol>
   </nav>
