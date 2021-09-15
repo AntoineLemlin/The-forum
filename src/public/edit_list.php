@@ -15,7 +15,7 @@ if ($_SESSION["id"]===$resultat["Author_ID"]){
         
         $new_content=$_POST['first-comment'];
     
-        modify_first_comment($topic_number,$new_content);
+        insert_modification($id_message,$new_content);
     
         header("Location: messages.php?topic_number=".$topic_number);
     }
