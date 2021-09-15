@@ -2,13 +2,14 @@
 session_start();
 require ("../App/Model/comment_editor.php");
 
-$topic_number=$_GET["topic_num"];
+$id_message=$_GET["id_message"];
 
-$final_input=prefilled($topic_number);
+$final_input=prefilled_messages($id_message);
 
-$resultat=check_authorID($topic_number);
+$resultat=check_MessageID($id_message);
+$topic_number = $resultat["Topic_Number"];
 
-if ($_SESSION["id"]===$resultat){
+if ($_SESSION["id"]===$resultat["Author_ID"]){
     if (isset($_POST['submit-modifier']))
     {
         
