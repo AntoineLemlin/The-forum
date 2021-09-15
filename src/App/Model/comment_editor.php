@@ -15,6 +15,20 @@ function prefilled ($topic_id){
 
 }
 
+function prefilled_messages ($message_id){
+    require "db_connect.php";
+
+    $sql="Select Content from Messages where ID_Message=:ID_Message";
+    $stmt=$conn->prepare($sql);
+    $stmt->BindParam(":ID_Message",$message_id);
+    $stmt->execute();
+
+    $topic_array=$stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $topic_array;
+
+}
+
 function modify_first_comment($topic_id,$Content){
 
     require "db_connect.php";
@@ -43,8 +57,42 @@ function check_authorID ($topic_number){
     return $topic_array["Author_ID"];
 }
 
+function check_MessageID ($message_id){
+    require "db_connect.php";
+
+    $sql="Select Topic_Number,Author_ID from Messages where ID_Message=:ID_Message";
+    $stmt=$conn->prepare($sql);
+    $stmt->BindParam(":ID_Message",$message_id);
+    $stmt->execute();
+
+    $topic_array=$stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $topic_array;
+}
 
 
+
+function insert_modification_date ($id ) {
+
+    
+
+    require "db_connect.php";
+    
+    date_default_timezone_set("Europe/Paris");
+    $date = date("Y-m-d h:i:sa") ;
+    $sql="UPDATE `Messages` SET `Edition_date`=: Edition_date WHERE `ID_Message` =: ID_Message" ;  
+    $stmt=$conn->prepare($sql);
+    $stmt->bindParam(":ID_Message", $id);
+    $stmt-> bindParam("Edition_date",$date);
+
+
+    $stmt->execute();
+    
+    
+
+
+
+} 
 
 
 
