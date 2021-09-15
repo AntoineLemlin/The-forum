@@ -24,7 +24,7 @@ function display_comments($topic_id) {
 
     require "db_connect.php";
     
-    $sql = "SELECT ID_Message,Email,Nickname,Create_date,Messages.Content,Signature,Avatar
+    $sql = "SELECT ID_Message,Email,Nickname,Create_date,Messages.Content,Edition_date,  Signature,Avatar
     FROM Messages inner join Topics 
     on Messages.Topic_Number=Topics.Topic_Number
     INNER JOIN Users

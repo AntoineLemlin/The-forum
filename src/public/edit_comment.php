@@ -8,7 +8,18 @@ $final_input=prefilled($topic_number);
 
 $resultat=check_authorID($topic_number);
 
-if ($_SESSION["id"]===$resultat){
+if (empty($_SESSION['id'])) 
+{
+
+    header("Location: messages.php?topic_number=".$topic_number);
+
+   
+
+}
+else {
+
+
+ if ($_SESSION["id"]===$resultat){
     if (isset($_POST['submit-modifier']))
     {
         
@@ -22,7 +33,10 @@ if ($_SESSION["id"]===$resultat){
 }
 else{
     header("Location: messages.php?topic_number=".$topic_number);
+}   
 }
+
+
 
 
 ?>
