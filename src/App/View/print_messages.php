@@ -11,7 +11,6 @@ $list_messages=display_comments($topic_id);
 
 
 <!-- FIRST MESSAGE -->
-<h2 class="text-center bg-light p-3"><?php echo $first_comment["TITLE"]; ?></h2>
 <div class="row mt-5">
                 <div class="col-3">
                   <div class ="img-modifier mb-2">
@@ -21,7 +20,7 @@ $list_messages=display_comments($topic_id);
                   <p class="user-id"><strong>Posts: </strong>45</p>
                 </div>
                 <div class="col-9">
-                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?>   </p>
+                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?>  Last modification :<?php echo $first_comment["Edition_date"] ?>   </p>
                   <p class="user-id mb-5"><?php echo $first_comment["Content"] ?> </p>
                   <form method="POST" action="edit_comment.php?topic_num=<?Php echo $topic_id ?>"  id="modify-comment">
                   <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
@@ -45,7 +44,7 @@ foreach($list_messages as $list){
                   <p class="user-id"><strong>Posts: </strong>45</p>
                 </div>
                 <div class="col-9">
-                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?></p>
+                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   Last modification <?php echo $list["Edition_date"] ?>  </p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
                   <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
                   <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
