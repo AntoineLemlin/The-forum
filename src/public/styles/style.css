@@ -254,6 +254,10 @@ header nav .navbar-toggler-icon {
   scroll-behavior: smooth;
 }
 
+* body .breadcrumb-item + .breadcrumb-item::before {
+  content: "\2039";
+}
+
 * body .message {
   position: absolute;
   top: 0;

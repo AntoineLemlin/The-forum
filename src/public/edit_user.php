@@ -71,11 +71,17 @@ require_once("../App/View/check_image.php");
   <nav class="" aria-label="breadcrumb">
     <ol class="breadcrumb bread-style align-text-bottom">
       <li class="breadcrumb-item bread-item">
-        <a href="#" class="text-decoration-none text-dark"
+        <a href="index.php" class="text-decoration-none text-dark"
           ><i class="fas fa-home"></i>Home</a>
       </li>
       <li class="breadcrumb-item bread-item active" aria-current="page">
-        Board index
+      <a href="index.php" class="text-decoration-none text-dark"
+          >Board Index</a>
+      </li>
+      <li class="breadcrumb-item bread-item">
+        <a href="#" class="text-decoration-none text-dark"
+          >Edit User</a
+        >
       </li>
     </ol>
   </nav>
@@ -236,29 +242,16 @@ require_once("../App/View/check_image.php");
           </nav>
         </div>
         <div class="col-sm-12 col-md-9 col-lg-9">
-          <ul class="list-bottom d-flex justify-content-end align-items-center mt-2 flex-wrap justify-content-xs-center">
-            <li class="mr-3">
-              <a href="#" class="text-nowrap">Contact us</a>
-            </li>
-            <li class="mr-3">
-              <a href="#" class="text-nowrap">The team</a>
-            </li>
-            <li class="mr-3">
-              <a href="#" class="text-nowrap">Terms</a>
-            </li>
-            <li class="mr-3">
-              <a href="#" class="text-nowrap">Privacy</a>
-            </li>
-            <li class="mr-3">
-              <a href="#" class="text-nowrap">Members</a>
-            </li>
-            <li class="mr-3">
-              <a href="#" class="text-nowrap">Delete cookies</a>
-            </li>
-            <li class="">
-              <a href="#" class="text-nowrap list-dark">All times are UTC</a>
-            </li>
-          </ul><a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"></a>
+        <ul class="list-bottom d-flex justify-content-end align-items-center mt-2 flex-wrap justify-content-xs-center ">
+            <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-envelope"></i>Contact us</a></li>
+            <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-shield-alt"></i>The team</a></li>
+            <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-check"></i>Terms</a></li>
+            <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-lock"></i>Privacy</a></li>
+            <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-users"></i>Members</a></li>
+            <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-trash-alt"></i>Delete cookies</a></li>
+            <li class=""><a href="#" class="text-nowrap list-dark">All times are UTC</a></li>
+          </ul>
+          <a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"></a>
         </div>
       </div>
     </div>
