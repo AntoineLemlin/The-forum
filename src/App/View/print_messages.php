@@ -44,7 +44,7 @@ foreach($list_messages as $list){
                   <p class="user-id"><strong>Posts: </strong>45</p>
                 </div>
                 <div class="col-9">
-                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require "../App/Controller/last_modification.php" ?>  </p>
+                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require "../App/Controller/last_modification_following.php" ?>  </p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
                   <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
                   <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
