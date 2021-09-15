@@ -7,6 +7,7 @@ $list_messages=display_comments($topic_id);
 
 
 
+
 if($first_comment["Edition_date"] != NULL ){
 
 
@@ -25,7 +26,7 @@ Last modification :<?php echo $first_comment["Edition_date"] ?>
 
 <?php
 
-if($list_messages["Edition_date"] != NULL ){
+elseif ($list_messages["Edition_date"] != NULL ){
 
 
 
