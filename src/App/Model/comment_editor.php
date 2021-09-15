@@ -72,7 +72,27 @@ function check_MessageID ($message_id){
 
 
 
+function insert_modification_date ($id ) {
 
+    
+
+    require "db_connect.php";
+    
+    date_default_timezone_set("Europe/Paris");
+    $date = date("Y-m-d h:i:sa") ;
+    $sql="UPDATE `Messages` SET `Edition_date`=: Edition_date WHERE `ID_Message` =: ID_Message" ;  
+    $stmt=$conn->prepare($sql);
+    $stmt->bindParam(":ID_Message", $id);
+    $stmt-> bindParam("Edition_date",$date);
+
+
+    $stmt->execute();
+    
+    
+
+
+
+} 
 
 
 
