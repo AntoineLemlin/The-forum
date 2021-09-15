@@ -1,10 +1,21 @@
 <?php 
 
 require "../App/Model/display_topic.php";
-$boardname = $_GET['board']; 
+$boardname = $_GET['board'];
+$search = $_GET['search'];
+$search = htmlspecialchars($search);
+
+if(empty($_GET['board'])){
+  $boardname = NULL;
+}
+
+if(empty($_GET['search'])){
+  $search = NULL;
+}
 
 
-$topic = print_topic($boardname);
+
+$topic = print_topic($boardname, $search);
 //print_r($topic);
 
 

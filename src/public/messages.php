@@ -6,7 +6,7 @@ if(isset($_POST['add-comment'])) {
   $topic = $_GET['topic_number'];
   $author = $_SESSION['id'];
   $content = $_POST['comment'];
-  $date = date("Y-m-d h:i:s"); 
+  $date = date("Y-m-d H:i:s"); 
 
  add_comment($topic,$date,$author,$content) ;  
  header("Refresh:0");
@@ -91,7 +91,7 @@ if(isset($_POST['add-comment'])) {
   <nav class="" aria-label="breadcrumb">
     <ol class="breadcrumb bread-style align-text-bottom">
       <li class="breadcrumb-item bread-item">
-        <a href="#" class="text-decoration-none text-dark"
+        <a href="index.php" class="text-decoration-none text-dark"
           ><i class="fas fa-home"></i>Home</a
         >
       </li>
@@ -145,8 +145,8 @@ if(isset($_POST['add-comment'])) {
 
 
 
-                <form id="search-bar" class="form-inline flex-nowrap" name="search-bar">
-                  <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                <form action="topics.php" method="GET" id="search-bar" class="form-inline flex-nowrap" name="search-bar">
+                  <input name="search" class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
                 </form>
               </div>
             </div>
@@ -196,8 +196,8 @@ if(isset($_POST['add-comment'])) {
         <div class="col-md-3 col-lg-3 px-5">
           <?php include("../App/View/reduced_profile.php"); ?>
           <!-- Search Bar -->
-          <form id="search-bar" class="form-inline flex-nowrap">
-          <input class="form-control w-100" type="search"
+          <form action="topics.php" method="GET" id="search-bar" class="form-inline flex-nowrap">
+          <input name="search" class="form-control w-100" type="search"
           placeholder="Search" aria-label="Search">
           <button class="btn btn-
           info" type="submit"><i class="fas fa-search"></i>

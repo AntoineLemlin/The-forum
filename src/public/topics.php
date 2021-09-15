@@ -1,6 +1,5 @@
 <?php 
 session_start();
-// require_once '../App/Controller/check_topics_param.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +81,7 @@ session_start();
       </li>
       <li class="breadcrumb-item bread-item active">
         <a href="#" class="text-decoration-none text-dark"
-          ><?php echo $_GET['board'];?></a
+          ><?php if(isset($_GET['board'])) echo $_GET['board'];?></a
         >
       </li>
     </ol>
@@ -101,8 +100,8 @@ session_start();
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
 
                 <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3" href="new_topics.php">New Topic</a>
-                <form id="search-bar" class="form-inline flex-nowrap" name="search-bar">
-                  <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                <form action="topics.php" method="GET" id="search-bar" class="form-inline flex-nowrap" name="search-bar">
+                  <input name="search" class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
                 </form>
               </div>
             </div>
@@ -190,8 +189,8 @@ session_start();
         <div class="col-md-3 col-lg-3 px-5">
           <?php include("../App/View/reduced_profile.php"); ?>
           <!-- Search Bar -->
-          <form id="search-bar" class="form-inline flex-nowrap">
-          <input class="form-control w-100" type="search"
+          <form action="topics.php" method="GET" id="search-bar" class="form-inline flex-nowrap">
+          <input name="search" class="form-control w-100" type="search"
           placeholder="Search" aria-label="Search">
           <button class="btn btn-
           info" type="submit"><i class="fas fa-search"></i>
