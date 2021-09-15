@@ -8,7 +8,7 @@ $first_comment=first_comment($topic_id);
 
 
 
-if($first_comment["Edition_date"] != NULL ){
+if($first_comment["Edition_date"] !== "0000-00-00 00:00:00" ){
 
 
 
