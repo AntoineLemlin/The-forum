@@ -11,6 +11,7 @@ $list_messages=display_comments($topic_id);
 
 
 <!-- FIRST MESSAGE -->
+<h2 class="text-center bg-light p-3"><?php echo $first_comment["TITLE"]; ?></h2>
 <div class="row mt-5">
                 <div class="col-3">
                   <div class ="img-modifier mb-2">

@@ -3,7 +3,7 @@
 function first_comment($topic_number){
     require "db_connect.php";
     
-    $sql = "SELECT Email,Nickname,Creation_Date,Signature,Avatar,Content 
+    $sql = "SELECT Email,Nickname,Creation_Date,Signature,Avatar,Content,TITLE 
     FROM Topics inner join Users 
     on Topics.Author_ID=Users.Id 
     where Topic_Number=:Topic_Num;  ";

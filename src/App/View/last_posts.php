@@ -2,20 +2,48 @@
 
 require('../App/Model/fetch_lastPosts.php');
 
+
 $fetched_data = getLastPosts();
 
+date_default_timezone_set('Europe/Brussels');
+$time1=new DateTime();
+
+
 for($i=0;$i<3;$i++){
+    $time2 = new DateTime($fetched_data[$i]['Creation_Date']);
+    $difference=$time2->diff($time1);
+     $difference_min = $difference->i;
+     $difference_hour = $difference->h;
+
+     $difference_total = $difference_min + ($difference_hour * 60);
+
+     if($difference_total < 60){
+       $time_post = $difference_total . " minutes";
+     }
+     if($difference_total < 1){
+       $time_post = "now";
+     }
+     if($difference_total > 60){
+      $time_post =  floor($difference_total/60) . " hours";
+     }
+
+     if($difference_total > 1440){
+       $time_post = floor($difference_total/1440) . " days";
+     }
+
+
+
 ?>
 
 <td class="card m-4" style="width: 100%;">
                     <div>
                       <div class="card-body">
                         <div class="title d-flex align-items-center">
-                          <h5 class="card-title"><?php echo $fetched_data[$i]['TITLE']; ?> - <?php echo $fetched_data[$i]['Board_Name']; ?></h5>
-                          <h6 class="card-subtitle ml-auto text-muted">2 hours ago</h6>
+                          <a href="messages.php?topic_number=<?php echo $fetched_data[$i]['Topic_Number']?>"><h5 class="card-title"><?php echo $fetched_data[$i]['TITLE']; ?> - <?php echo $fetched_data[$i]['Board_Name']; ?></h5></a>
+                          <h6 class="card-subtitle ml-auto text-muted"><?php echo $time_post ?></h6>
                         </div>
                         <p class="card-text h6"><?php echo $fetched_data[$i]['Content']; ?></p>
-                        <p class="card-text">Tags: test, work, eat, repeat</p>
+                        <p class="card-text h6"><?php  echo $fetched_data[$i]['Nickname']?></p>
                       </div>
                     </div>
                   </td>

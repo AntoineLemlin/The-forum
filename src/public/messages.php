@@ -212,54 +212,7 @@ if(isset($_POST['add-comment'])) {
               </thead>
               <tbody class="bg-light d-flex justify-content-center">
                 <tr>
-                  <td class="card m-4" style="width: 100%;">
-                    <div>
-                      <div class="card-body">
-                        <div class="title d-flex align-items-center">
-                          <h5 class="card-title">Post - Category</h5>
-                          <h6 class="card-subtitle ml-auto text-muted">2 hours ago</h6>
-                        </div>
-                        <p class="card-text">Writing your own post here. It gets displayed here.</p>
-                        <p class="card-text">Tags: test, work, eat, repeat</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="card m-4" style="width: 100%;">
-                    <div>
-                      <div class="card-body">
-                        <div class="title d-flex align-items-center">
-                          <h5 class="card-title">Post - Category</h5>
-                          <h6 class="card-subtitle ml-auto text-muted">2 hours ago</h6>
-                        </div>
-                        <p class="card-text">Writing your own post here. It gets displayed here.</p>
-                        <p class="card-text">Tags: test, work, eat, repeat</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="card m-4" style="width: 100%;">
-                    <div>
-                      <div class="card-body">
-                        <div class="title d-flex align-items-center">
-                          <h5 class="card-title">Post - Category</h5>
-                          <h6 class="card-subtitle ml-auto text-muted">2 hours ago</h6>
-                        </div>
-                        <p class="card-text">Writing your own post here. It gets displayed here.</p>
-                        <p class="card-text">Tags: test, work, eat, repeat</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="card m-4" style="width: 100%;">
-                    <div>
-                      <div class="card-body">
-                        <div class="title d-flex align-items-center">
-                          <h5 class="card-title">Post - Category</h5>
-                          <h6 class="card-subtitle ml-auto text-muted">2 hours ago</h6>
-                        </div>
-                        <p class="card-text">Writing your own post here. It gets displayed here.</p>
-                        <p class="card-text">Tags: test, work, eat, repeat</p>
-                      </div>
-                    </div>
-                  </td>
+                <?php require("../App/View/last_posts.php"); ?>
                 </tr>
               </tbody>
             </table>

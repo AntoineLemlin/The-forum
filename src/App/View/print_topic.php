@@ -1,7 +1,7 @@
 <?php 
 
 require "../App/Model/display_topic.php";
-$boardname = $_GET['board'] ; 
+$boardname = $_GET['board']; 
 
 
 $topic = print_topic($boardname);
