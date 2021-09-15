@@ -40,7 +40,7 @@ function modify_first_comment($topic_id,$Content){
     $stmt=$conn->prepare($sql);
     $stmt->BindParam(":Topic_number",$topic_id);
     $stmt->BindParam(":Content",$Content);
-    $stmt->BindParam(":Edition_date ",$date);
+    $stmt->BindParam(":Edition_date",$date);
     $stmt->execute();
 
 
