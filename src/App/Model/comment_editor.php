@@ -32,13 +32,15 @@ function prefilled_messages ($message_id){
 function modify_first_comment($topic_id,$Content){
 
     require "db_connect.php";
-
+    date_default_timezone_set("Europe/Paris");
+    $date = date("Y-m-d h:i:s");
     $sql="Update Topics 
-     set Content=:Content       
+     set Content=:Content, Edition_date =:Edition_date       
      where Topic_Number=:Topic_number";
     $stmt=$conn->prepare($sql);
     $stmt->BindParam(":Topic_number",$topic_id);
     $stmt->BindParam(":Content",$Content);
+    $stmt->BindParam(":Edition_date ",$date);
     $stmt->execute();
 
 
@@ -95,6 +97,7 @@ function insert_modification ($id,$Content ) {
 
 
 } 
+
 
 
 
