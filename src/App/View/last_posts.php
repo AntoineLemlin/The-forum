@@ -31,7 +31,11 @@ for($i=0;$i<$count;$i++){
      $difference_total = $difference_min + ($difference_hour * 60) + ($difference_day *1440) + ($difference_month * 43800) + ($difference_year * 525599); 
 
      if($difference_total < 60){
-       $time_post = $difference_total . " minutes ago";
+       if($difference_total === 1){
+         $time_post = $difference_total . " minute ago";
+       }else{
+        $time_post = $difference_total . " minutes ago";
+       }
      }
      if($difference_total < 1){
        $time_post = "now";

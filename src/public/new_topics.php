@@ -222,7 +222,7 @@ require ("../App/Controller/check_topic.php");
             <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-trash-alt"></i>Delete cookies</a></li>
             <li class=""><a href="#" class="text-nowrap list-dark">All times are UTC</a></li>
           </ul>
-          <a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"></a>
+          <a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"><i class="fas fa-arrow-up"></i></a>
         </div>
       </div>
     </div>

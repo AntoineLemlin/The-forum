@@ -179,7 +179,7 @@ else{
             <li class="">
               <a href="#" class="text-nowrap list-dark">All times are UTC</a>
             </li>
-          </ul><a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"></a>
+          </ul><a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"><i class="fas fa-arrow-up"></i></a>
         </div>
       </div>
     </div>

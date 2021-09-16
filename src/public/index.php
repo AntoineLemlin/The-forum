@@ -80,7 +80,7 @@
       </div>
       <div class="row">
         <div class="col-md-9 col-sm col-lg-9">
-          <div class="container pt-5 bg-light d-flex flex-wrap">
+          <div class="container pt-5 bg-light d-flex flex-wrap justify-content-center">
             <?php require("../App/View/board_display.php");?>
           </div>
         </div>
@@ -165,7 +165,7 @@
             <li class="mr-3"><a href="#" class="text-nowrap "><i class="p-2 fas fa-trash-alt"></i>Delete cookies</a></li>
             <li class=""><a href="#" class="text-nowrap list-dark">All times are UTC</a></li>
           </ul>
-          <a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"></a>
+          <a id="btn-back-to-top" class="btn btn-floating btn-lg" href="#header-id"><i class="fas fa-arrow-up"></i></a>
         </div>
       </div>
     </div>
