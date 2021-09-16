@@ -29,10 +29,12 @@
     function MessageCount($name){
 
         require("../App/Model/db_connect.php"); 
-        $sql = "SELECT COUNT(ID_Message) as nb_messages
+        $sql = "SELECT COUNT(ID_Message) as nb_messages,Messages.Create_Date as last_date
                 from  Topics inner join Messages
                 on Topics.Topic_Number=Messages.Topic_Number
-                where upper(Board_Name)=upper(:Name)";
+                where upper(Board_Name)=upper(:Name)
+                order by Create_Date DESC
+                LIMIT 1";
 
         $stmt = $conn->prepare($sql);
         $stmt->BindParam(":Name",$name);
