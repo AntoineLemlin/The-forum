@@ -74,7 +74,7 @@ function check_MessageID ($message_id){
 
 
 
-function insert_modification ($id,$Content ) {
+function insert_modification ($id,$Content) {
 
     
 
