@@ -4,6 +4,7 @@ require("../App/Model/board_fetch.php");
 
 $fetchedData = fetchBoard();
 
+
 foreach($fetchedData as $board){
    
 ?>
@@ -21,12 +22,14 @@ foreach($fetchedData as $board){
                   </div>
                 </div>
                 <ul class="list-group list-group-horizontal col-12 p-0">
-                    <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='topic'>NB</span><br>
+
+                <?php require "../App/View/count_boards.php"; ?>
+                    <!-- <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='topic'>NB</span><br>
                     Topics</li>
                   <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='posts'>NB</span><br>
                   Posts</li>
                   <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='date'>date</span><br>
-                  Last post</li>
+                  Last post</li> -->
                 </ul>
                 <div class="card-footer text-center">
                   <a  href="topics.php?board=<?php echo $board['Name']; ?>"><button type="button" class ="btn btn-info" >  click </button> </a>

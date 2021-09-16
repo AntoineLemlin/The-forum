@@ -25,7 +25,7 @@ foreach ($topic as $top ) {
                   <td class="d-flex h2 align-items-center">
                     <i class="fas fa-folder mr-5 p-3 border rounded-circle"></i>
                     <div class="text flex-column">
-                       <a href="messages.php?topic_number=<?php echo $top['Topic_Number']; ?>"><h3><?php echo $top['Title'] ?></h3></a> 
+                       <a href="messages.php?topic_number=<?php echo $top['Topic_Number']; ?>"><h3><?php echo $top['TITLE'] ?></h3></a> 
                         <h4><?php echo 'By '. $top['Nickname'] ?></h4>
                     </div>
 
