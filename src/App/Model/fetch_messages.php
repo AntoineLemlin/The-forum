@@ -20,6 +20,9 @@ function first_comment($topic_number){
 }
 
 
+
+
+
 function display_comments($topic_id) {
 
     require "db_connect.php";
@@ -43,7 +46,8 @@ function display_comments($topic_id) {
     
     
     
-    }
+    
+}
 
 
 

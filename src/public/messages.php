@@ -38,6 +38,7 @@ if(isset($_POST['add-comment'])) {
   require_once("../App/Controller/login_control.php");
   require_once("../App/Controller/register.php");
   require_once("../App/View/check_image.php");
+
   
  ?>
 <body class="bg-light">
@@ -152,7 +153,10 @@ if(isset($_POST['add-comment'])) {
             </div>
             
               <div class="container">
-               <?php require("../App/View/print_messages.php") ?>
+                <?php 
+                require("../App/Controller/lock_topic.php");
+                require("../App/View/print_messages.php");
+               ?>
           </div>
 
           <div class="row">

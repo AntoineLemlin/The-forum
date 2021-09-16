@@ -2,15 +2,34 @@
 
 require "../App/Model/fetch_messages.php";
 
+
+
 $topic_id=$_GET['topic_number'] ; 
 
 $first_comment=first_comment($topic_id);
 $list_messages=display_comments($topic_id);
+
 ?>
 
 
 <!-- FIRST MESSAGE -->
-<h2 class="bg-light text-center"><?php echo $first_comment["TITLE"]; ?></h2>
+<div class="row">
+  <h2 class="bg-light text-center"><?php echo $first_comment["TITLE"]; ?></h2>
+  <?php if($first_comment['Author_ID'] == $_SESSION['id']){
+
+    ?>
+  <form class="ml-auto" method="POST">
+      <input class="btn btn-primary rounded-circle" id="sumbit" type="submit" name ="lock" value="<?php if($topic_current['locked'] == "yes") {
+        echo $topic_current['locked'];
+       }
+       if($topic_current['locked'] == "no"){
+         echo $topic_current['locked'];
+       } ?>"> 
+  </form>
+<?php
+  }
+  ?>
+</div>
 <div class="row mt-5">
                 <div class="col-3">
                   <div class ="img-modifier mb-2">
