@@ -80,7 +80,7 @@ require("../App/Controller/lock_topic.php");
             </ul>
           </div>
         </nav>
-        <h1 id="title" class="display-4">Tracker</h1>
+        <a href="index.php" class="text-white text-decoration-none"><h1 id="title" class="display-4">Tracker</h1></a>
       </div>
     </div>
     </header>
