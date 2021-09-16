@@ -33,7 +33,7 @@ function modify_first_comment($topic_id,$Content){
 
     require "db_connect.php";
     date_default_timezone_set("Europe/Paris");
-    $date = date("Y-m-d h:i:s");
+    $date = date("Y-m-d H:i:s");
     $sql="Update Topics 
      set Content=:Content, Edition_date =:Edition_date       
      where Topic_Number=:Topic_number";
@@ -81,7 +81,7 @@ function insert_modification ($id,$Content ) {
     require "db_connect.php";
     
     date_default_timezone_set("Europe/Paris");
-    $date = date("Y-m-d h:i:s");
+    $date = date("Y-m-d H:i:s");
     
     $sql="UPDATE `Messages` SET Edition_date=:Edition_date, Content=:Content  WHERE `ID_Message` =:ID_Message" ;  
     $stmt=$conn->prepare($sql);
