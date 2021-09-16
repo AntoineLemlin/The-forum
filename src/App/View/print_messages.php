@@ -6,7 +6,6 @@ $topic_id=$_GET['topic_number'] ;
 
 $first_comment=first_comment($topic_id);
 $list_messages=display_comments($topic_id);
-
 ?>
 
 
@@ -23,9 +22,16 @@ $list_messages=display_comments($topic_id);
                 <div class="col-9">
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?> <?php require "../App/Controller/last_modification.php" ?>  </p>
                   <p class="user-id mb-5"><?php echo $first_comment["Content"] ?> </p>
-                  <form method="POST" action="edit_comment.php?topic_num=<?Php echo $topic_id ?>"  id="modify-comment">
-                  <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
-                  </form> 
+                  <?php 
+                  if($first_comment['Author_ID'] == $_SESSION['id']){
+                    ?>
+                    <form method="POST" action="edit_comment.php?topic_num=<?Php echo $topic_id ?>"  id="modify-comment">
+                    <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+                    </form> 
+                    
+                    <?php
+                  }
+                  ?>
                   <hr>
                   <p class="user-id"> <?php echo $first_comment["Signature"] ?> </p>
                 </div>
@@ -47,9 +53,16 @@ foreach($list_messages as $list){
                 <div class="col-9">
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require "../App/Controller/last_modification_following.php"; ?>  </p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
-                  <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
-                  <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
-                  </form> 
+                  <?php
+                  if($list['Author_ID'] === $_SESSION['id']){
+                    ?>
+                    <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
+                    <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+                    </form> 
+
+                  <?php
+                  } 
+                  ?>
                   <hr>
                   <p class="user-id"> <?php echo $list["Signature"] ?> </p>
                 </div>
