@@ -18,13 +18,14 @@ $list_messages=display_comments($topic_id);
   <?php if($first_comment['Author_ID'] == $_SESSION['id']){
 
     ?>
-  <form class="ml-auto" method="POST">
-      <input class="btn btn-primary rounded-circle" id="sumbit" type="submit" name ="lock" value="<?php if($topic_current['locked'] == "yes") {
-        echo $topic_current['locked'];
-       }
-       if($topic_current['locked'] == "no"){
-         echo $topic_current['locked'];
-       } ?>"> 
+  <form action="" class="ml-auto" method="POST">
+      <button class="btn btn-primary rounded" id="submit" type="submit" name ="lock" ><?php
+      if($topic_current['locked'] == "no"){
+        echo "Lock <i class='fas fa-lock h4 ml-3 '></i>";
+      }else if($topic_current['locked'] == "yes"){
+        echo "Unlock <i class='fas fa-unlock h4 ml-3 ''></i>";
+      }
+      ?></button>
   </form>
 <?php
   }

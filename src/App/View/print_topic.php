@@ -14,7 +14,6 @@ if(empty($_GET['search'])){
 }
 
 
-
 $topic = print_topic($boardname, $search);
 //print_r($topic);
 
@@ -33,7 +32,14 @@ foreach ($topic as $top ) {
                   </td>
 
                   <td class=" h4">
-                    <i class="fas fa-folder"></i>  
+                      <?php 
+                      if($top['locked'] == "yes"){
+                        echo "<i class='fas fa-lock text-dark'></i>";
+                      }else if($top['locked'] == "no"){
+                        echo "<i class='fas fa-folder text-dark'></i>";
+
+                      }
+                        ?>  
                   </td>
 
                   <td class="m-3">

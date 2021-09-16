@@ -11,7 +11,7 @@ if(isset($_POST['add-comment'])) {
  add_comment($topic,$date,$author,$content) ;  
  header("Refresh:0");
  exit;
-
+ 
 }
 
 
@@ -24,23 +24,24 @@ if(isset($_POST['add-comment'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/style.css">
-  <title>Tracker</title>
-</head><?php
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Tracker</title>
+  </head><?php
 
-  require_once("../App/Controller/check_session.php");
-  require_once("../App/Controller/login_control.php");
-  require_once("../App/Controller/register.php");
-  require_once("../App/View/check_image.php");
+require_once("../App/Controller/check_session.php");
+require_once("../App/Controller/login_control.php");
+require_once("../App/Controller/register.php");
+require_once("../App/View/check_image.php");
+require("../App/Controller/lock_topic.php");
 
-  
- ?>
+
+?>
 <body class="bg-light">
     <header id="header-id">
       <div
@@ -128,9 +129,9 @@ if(isset($_POST['add-comment'])) {
           <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
 
-              <form action="" method="POST">
-                <button type="submit" name="post-reply" id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="#">Post-Reply <i class="fas fa-reply"></i></button>
-             </form>
+              
+             
+                <?php require '../App/View/display_Reply.php';?>
                 
                 <div class="dropdown mr-5 pr-3">
                   <button class="btn btn-secondary dropdown-toggle rounded-pill  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -143,9 +144,6 @@ if(isset($_POST['add-comment'])) {
                   </div>
                 </div>
 
-
-
-
                 <form action="topics.php" method="GET" id="search-bar" class="form-inline flex-nowrap" name="search-bar">
                   <input name="search" class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
                 </form>
@@ -154,7 +152,6 @@ if(isset($_POST['add-comment'])) {
             
               <div class="container">
                 <?php 
-                require("../App/Controller/lock_topic.php");
                 require("../App/View/print_messages.php");
                ?>
           </div>
@@ -174,9 +171,8 @@ if(isset($_POST['add-comment'])) {
 <div class="row">
               <div class="col-12 d-flex align-items-center justify-content-start m-4">
 
-              <form action="" method="POST">
-                <button type="submit" name="post-reply" id="new-message" class="h5 mr-5 text-white bg-primary p-3 rounded-pill" href="#">Post-Reply <i class="fas fa-reply"></i></button>
-             </form>                
+              <?php require '../App/View/display_Reply.php';?>
+               
                 <div class="dropdown mr-5 pr-3">
                   <button class="btn btn-secondary dropdown-toggle rounded-pill  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-wrench p-0"></i>

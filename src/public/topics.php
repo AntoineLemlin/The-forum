@@ -17,7 +17,6 @@ session_start();
   require("../App/Controller/login_control.php");
   require("../App/Controller/register.php");
   require("../App/View/check_image.php");
-  require("../App/Controller/lock_topic.php");
   
  ?>
 <body class="bg-light">
