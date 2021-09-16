@@ -26,10 +26,10 @@ for($i=0;$i<3;$i++){
         }
         ?>">
            <?php 
-            echo isImage($fetchedData[$i]['Avatar'], "60", $fetchedData[$i]['Email']);           
+            echo isImage($fetchedData[$i]['Avatar'], "50", $fetchedData[$i]['Email']);           
            ?>
-            <h5 class="card-title text-center"><?php echo $fetchedData[$i]['Nickname']; ?></h5>
-            <p class="card-text text-center h6"><?php echo $fetchedData[$i]['Signature']; ?></p>
+            <h6 class="card-title text-center h6"><?php echo $fetchedData[$i]['Nickname']; ?></h6>
+            <p class="card-text text-center h6 text-truncate"><?php echo $fetchedData[$i]['Signature']; ?></p>
         </div>
     </td>
         

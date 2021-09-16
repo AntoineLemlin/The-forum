@@ -118,7 +118,7 @@ else{
   </nav>
 
   <div class="col-12">
-        <h2 class="text-center mt-5 bg-primary rounded border border-dark p-3 text-white">Edit comment</h2>
+  <h2 class=" m-auto text-center m-5 bg-primary rounded border border-dark p-3 text-white w-25">Edit comment</h2>
       <form method="POST" class="text-center">
       <div class="form-group w-25 mx-auto"  >
         <textarea type="text" class='form-control w-100' name="first-comment"  rows ="5" style="resize:none; "><?php echo $final_input['Content'] ?></textarea> >
