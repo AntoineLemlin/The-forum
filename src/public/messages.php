@@ -11,12 +11,6 @@ if(isset($_POST['add-comment'])) {
  add_comment($topic,$date,$author,$content) ;  
  header("Refresh:0");
  exit;
-<<<<<<< HEAD
-
-=======
- 
-}
->>>>>>> 60d07d0476003cff37684e147ba5074fb901b4a4
 
 
 
