@@ -13,8 +13,8 @@
     function BoardCount($name){
         require("../App/Model/db_connect.php"); 
         $sql = "SELECT COUNT(Topic_Number) as nb_topics
-                from Boards 
-                where upper(BoardName)=upper(:Name)";
+                from Topics 
+                where upper(Board_Name)=upper(:Name)";
 
         $stmt = $conn->prepare($sql);
         $stmt->BindParam(":Name",$name);
@@ -28,11 +28,11 @@
 
     function MessageCount($name){
 
-        require("../Model/db_connect.php"); 
+        require("../App/Model/db_connect.php"); 
         $sql = "SELECT COUNT(ID_Message) as nb_messages
                 from  Topics inner join Messages
                 on Topics.Topic_Number=Messages.Topic_Number
-                where upper(Name)=upper(:Name)";
+                where upper(Board_Name)=upper(:Name)";
 
         $stmt = $conn->prepare($sql);
         $stmt->BindParam(":Name",$name);
