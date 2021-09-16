@@ -1,16 +1,18 @@
 <?php 
 
 require "../App/Model/display_topic.php";
-$boardname = $_GET['board'];
-$search = $_GET['search'];
-$search = htmlspecialchars($search);
 
 if(empty($_GET['board'])){
   $boardname = NULL;
+}else if(isset($_GET['board'])){
+  $boardname = $_GET['board'];
 }
 
 if(empty($_GET['search'])){
   $search = NULL;
+}else if(isset($_GET['search'])){
+  $search = $_GET['search'];
+  $search = htmlspecialchars($search);
 }
 
 
