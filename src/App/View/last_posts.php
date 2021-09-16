@@ -57,9 +57,9 @@ for($i=0;$i<$count;$i++){
 
 ?>
 
-<td class="card m-4" style="width: 100%;">
+<td class="card my-4" style="width: 100%;">
                     <div>
-                      <div class="card-body">
+                      <div class="card-body w-100">
                         <div class="title d-flex align-items-center">
                           <a href="messages.php?topic_number=<?php echo $fetched_data[$i]['Topic_Number']?>"><h5 class="card-title"><?php echo $fetched_data[$i]['TITLE']; ?> - <?php echo $fetched_data[$i]['Board_Name']; ?></h5></a>
                           <h6 class="card-subtitle ml-auto text-muted"><?php echo $time_post ?></h6>

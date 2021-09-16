@@ -2,6 +2,9 @@
 
 require "../App/Model/fetch_messages.php";
 
+if(empty($_SESSION['id'])){
+  $_SESSION['id'] = NULL;
+}
 
 
 $topic_id=$_GET['topic_number'] ; 
@@ -59,10 +62,10 @@ $list_messages=display_comments($topic_id);
 <!-- FOLLOWING MESSAGES -->
 
 <?php
-foreach($list_messages as $list){
+foreach($list_messages as $i=>$list){
     ?>
 
-              <div class="row mt-5">
+              <div id="<?php echo $i; ?>" class="row mt-5">
                 <div class="col-3">
                   <div class ="img-modifier mb-2">
                   <?php echo isImage($list["Avatar"], "80", $list["Email"]); ?>
