@@ -55,7 +55,7 @@ foreach ($topic as $top ) {
                   </td>
 
                   <td class="m-3">
-                    <h4 class="text-muted"><?php print_r( display_view($top['Title'])) ?></h4>
+                    <h4 class="text-muted"><?php print_r(display_view($top['TITLE'])) ?></h4>
                   </td>
 
                   <td class="flex-column">
