@@ -12,11 +12,14 @@ if(isset($_POST['add-comment'])) {
  header("Refresh:0");
  exit;
 
+
+
+
 }
 
 
 
-
+require "../App/Controller/click_topics_checker.php";
 
 
 

@@ -1,9 +1,5 @@
 <?php
 
-require "../App/Model/fetch_messages.php";
-
-
-
 $topic_id=$_GET['topic_number'] ; 
 
 $first_comment=first_comment($topic_id);
@@ -13,6 +9,7 @@ $list_messages=display_comments($topic_id);
 
 
 <!-- FIRST MESSAGE -->
+
 <div class="row">
   <h2 class="bg-light text-center"><?php echo $first_comment["TITLE"]; ?></h2>
   <?php if($first_comment['Author_ID'] == $_SESSION['id']){

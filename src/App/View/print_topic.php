@@ -2,6 +2,8 @@
 
 require "../App/Model/display_topic.php";
 require "../App/Model/post_on_topics.php" ;
+require "../App/Model/add_view.php" ;
+
 $boardname = $_GET['board'];
 $search = $_GET['search'];
 $search = htmlspecialchars($search);
@@ -42,7 +44,7 @@ foreach ($topic as $top ) {
                   </td>
 
                   <td class="m-3">
-                    <h4 class="text-muted">5078</h4>
+                    <h4 class="text-muted"><?php print_r( display_view($top['Title'])) ?></h4>
                   </td>
 
                   <td class="d-flex h4 flex-column">
