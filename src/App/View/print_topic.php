@@ -1,6 +1,7 @@
 <?php 
 
 require "../App/Model/display_topic.php";
+require "../App/Model/post_on_topics.php" ;
 $boardname = $_GET['board'];
 $search = $_GET['search'];
 $search = htmlspecialchars($search);
@@ -37,7 +38,7 @@ foreach ($topic as $top ) {
                   </td>
 
                   <td class="m-3">
-                    <h4 class="text-muted">203</h4>
+                    <h4 class="text-muted"><?php print_r(Get_Post_Count ($top['Topic_Number'])) ;   ?> </h4>
                   </td>
 
                   <td class="m-3">

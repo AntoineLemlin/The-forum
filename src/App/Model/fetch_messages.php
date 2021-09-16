@@ -46,6 +46,7 @@ function display_comments($topic_id) {
     }
 
 
+    
 
 
 
