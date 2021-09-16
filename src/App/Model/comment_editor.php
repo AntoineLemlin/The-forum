@@ -98,7 +98,34 @@ function insert_modification ($id,$Content) {
 
 } 
 
+function COUNT_POST ($Author_ID){
+    require "db_connect.php";
 
+    $sql="SELECT count(`Content`) FROM `Messages` WHERE `Author_ID`=:Author_ID";
+    $stmt=$conn->prepare($sql);
+    $stmt->BindParam(":Author_ID",$Author_ID);
+    $stmt->execute();
+
+    $topic_array=$stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $topic_array["count(`Content`)"];
+}
+
+
+function Nickname_To_ID($Nickname) {
+
+    require "db_connect.php";
+
+    $sql="Select Id from Users where Nickname=:Nickname";
+    $stmt=$conn->prepare($sql);
+    $stmt->BindParam(":Nickname",$Nickname);
+    $stmt->execute();
+
+    $topic_array=$stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $topic_array['Id'];
+
+}
 
 
 

@@ -36,7 +36,7 @@ $list_messages=display_comments($topic_id);
                     <?php echo isImage($first_comment["Avatar"], "80", $first_comment["Email"]); ?>
                   </div>
                   <h6><?php echo $first_comment["Nickname"] ?></h6>
-                  <p class="user-id"><strong>Posts: </strong>45</p>
+                  <p class="user-id"><strong>Posts: <?php require "../App/Model/count_post_first.php" ?></strong></p>
                 </div>
                 <div class="col-9">
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?> <?php require "../App/Controller/last_modification.php" ?>  </p>
@@ -67,10 +67,10 @@ foreach($list_messages as $list){
                   <?php echo isImage($list["Avatar"], "80", $list["Email"]); ?>
                   </div>
                   <h6><?php echo $list["Nickname"] ?></h6>
-                  <p class="user-id"><strong>Posts: </strong>45</p>
+                  <p class="user-id"><strong>Posts: </strong> <?php require "../App/Model/count_post.php" ?></p>
                 </div>
                 <div class="col-9">
-                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require_once "../App/Controller/last_modification_following.php"; ?>  </p>
+                  <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require "../App/Controller/last_modification_following.php"; ?>  </p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
                   <?php
                   if($list['Author_ID'] === $_SESSION['id']){
