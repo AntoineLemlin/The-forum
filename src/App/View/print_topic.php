@@ -50,7 +50,7 @@ foreach ($topic as $top ) {
                     <h4 class="text-muted">5078</h4>
                   </td>
 
-                  <td class="d-flex h4 flex-column">
+                  <td class="flex-column">
                         <h4><?php echo 'By '. $top['Nickname'] ?> <i class="fas fa-external-link-square-alt ml-3"></i></h4>
                         <h5><?php echo  $top['Creation_Date'] ?></h4>
 
