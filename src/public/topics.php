@@ -17,7 +17,6 @@ session_start();
   require("../App/Controller/login_control.php");
   require("../App/Controller/register.php");
   require("../App/View/check_image.php");
-  require("../App/Controller/lock_topic.php");
   
  ?>
 <body class="bg-light">
@@ -58,9 +57,9 @@ session_start();
             </ul>
           </div>
         </nav>
-        <h1 id="title" class="display-4">Tracker</h1>
+        <a href="index.php" class="text-white text-decoration-none"><h1 id="title" class="display-4">Tracker</h1></a>
       </div>
-    </div>
+    </div> 
     </header>
 
 <main class="mx-5">
@@ -128,19 +127,19 @@ session_start();
 
                   </td>
 
-                  <td class=" h4">
+                  <td class="h4">
                     <i class="fas fa-bullhorn"></i>  
                   </td>
 
-                  <td class="m-3">
+                  <td class="">
                     <h4 class="text-muted">203</h4>
                   </td>
 
-                  <td class="m-3">
+                  <td class="">
                     <h4 class="text-muted">5078</h4>
                   </td>
 
-                  <td class="d-flex h4 flex-column">
+                  <td class="flex-column">
                         <h4>by Carla <i class="fas fa-external-link-square-alt ml-3"></i></h4>
                         <h5>Sun Oct 09, 2016 5:58 pm</h4>
 

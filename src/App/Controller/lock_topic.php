@@ -10,6 +10,7 @@ if(isset($_POST['lock'])){
         unlockTopic($topic_number);
     }
 
-}
+    $topic_current = get_topic($topic_number);
 
+}
 ?>

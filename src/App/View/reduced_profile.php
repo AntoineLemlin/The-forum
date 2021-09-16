@@ -9,8 +9,8 @@
             
         </div>
         <div class="username">
-            <h3 class="text-dark h3"><?php echo $_SESSION['username'] ?></h3>
-            <h4 class="text-dark"><strong><?php echo $_SESSION['signature'] ?></strong></h4>
+            <h3 class="text-dark h4"><?php echo $_SESSION['username'] ?></h3>
+            <h5 class="text-dark"><strong><?php echo $_SESSION['signature'] ?></strong></h5>
             <h4><a href="edit_user.php">Edit your profile</a></h4>
         </div>
     </div>
