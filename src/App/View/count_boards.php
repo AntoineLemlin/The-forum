@@ -6,7 +6,7 @@ $countboard= BoardCount($board['Name']);
 $countmessage= MessageCount($board['Name']);
 
 $lastPost = new DateTime($countmessage['last_date']);
-$lastPost = $lastPost->format("y-m-d h:s");
+$lastPost = $lastPost->format("y-m-d H:s");
 
 
 ?>
