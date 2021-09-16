@@ -24,6 +24,7 @@ foreach($fetchedData as $board){
                 <ul class="list-group list-group-horizontal col-12 p-0">
 
                 <?php require "../App/View/count_boards.php"; ?>
+                
                     <!-- <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='topic'>NB</span><br>
                     Topics</li>
                   <li class="list-group-item col-4 border-0" style="font-size: 1rem;"><span class='posts'>NB</span><br>

@@ -1,7 +1,6 @@
 <?php
-require("../App/Model/board_fetch.php");
 
-$count=BoardCount($board['Name']);
+$count= BoardCount($board['Name']);
 print_r ($count);
 
 

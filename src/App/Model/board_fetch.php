@@ -11,7 +11,7 @@
     }
 
     function BoardCount($name){
-        require("../Model/db_connect.php"); 
+        require("../App/Model/db_connect.php"); 
         $sql = "SELECT COUNT(Topics.Topic_Number) as nb_topics,COUNT(ID_Message) as nb_messages
                 from Boards inner join Topics
                 on Topics.Board_Name=Boards.Name
