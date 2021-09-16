@@ -13,10 +13,11 @@ session_start();
   <title>Tracker</title>
 </head><?php
 
-  require_once("../App/Controller/check_session.php");
-  require_once("../App/Controller/login_control.php");
-  require_once("../App/Controller/register.php");
-  require_once("../App/View/check_image.php");
+  require("../App/Controller/check_session.php");
+  require("../App/Controller/login_control.php");
+  require("../App/Controller/register.php");
+  require("../App/View/check_image.php");
+  require("../App/Controller/lock_topic.php");
   
  ?>
 <body class="bg-light">
