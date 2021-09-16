@@ -4,10 +4,6 @@ require "../App/Model/display_topic.php";
 require "../App/Model/post_on_topics.php" ;
 require "../App/Model/add_view.php" ;
 
-$boardname = $_GET['board'];
-$search = $_GET['search'];
-$search = htmlspecialchars($search);
-
 if(empty($_GET['board'])){
   $boardname = NULL;
 }else if(isset($_GET['board'])){
