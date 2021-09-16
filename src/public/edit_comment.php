@@ -116,14 +116,20 @@ else{
       </li>
     </ol>
   </nav>
-  
-  <form method="POST"  class='text-center '>
-  <div class="form-group w-25 mx-auto"  >
-        <textarea type="text" class='form-control mx-auto ' name="first-comment"  rows ="5" style="resize:none; "><?php echo $final_input['Content'] ?></textarea> >
-        <button id="submit" type="submit" name="submit-modifier" class="btn btn-primary mt-5 w-25 h2">Modify</button>
-  </div>
 
-    </form>
+  <div class="col-12">
+        <h2 class="text-center mt-5 bg-primary rounded border border-dark p-3 text-white">Edit comment</h2>
+      <form method="POST" class="text-center">
+      <div class="form-group w-25 mx-auto"  >
+        <textarea type="text" class='form-control w-100' name="first-comment"  rows ="5" style="resize:none; "><?php echo $final_input['Content'] ?></textarea> >
+  </div>
+        <div class="d-flex justify-content-center">
+        <button id="submit" type="submit" name="submit-modifier" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+
+        </div>
+      </form>
+      </div>
+
 
   </main>
   <footer>

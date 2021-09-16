@@ -24,12 +24,12 @@ function display_comments($topic_id) {
 
     require "db_connect.php";
     
-    $sql = "SELECT ID_Message,Email,Nickname,Create_date,Messages.Content,Messages.Edition_date,  Signature,Avatar
+    $sql = "SELECT ID_Message,Email,Nickname,Create_date,Messages.Content,Messages.Edition_date,Signature,Avatar
     FROM Messages inner join Topics 
     on Messages.Topic_Number=Topics.Topic_Number
     INNER JOIN Users
     on Users.id=Messages.Author_ID
-    where Topics.Topic_Number=:Topic_Num; ";
+    where Topics.Topic_Number=:Topic_Num";
     
     $stmt = $conn->prepare($sql);
     
