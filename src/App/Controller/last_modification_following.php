@@ -19,4 +19,3 @@ Last modification :<?php echo $list["Edition_date"] ?>
 
 
 
-
