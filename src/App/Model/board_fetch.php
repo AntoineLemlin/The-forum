@@ -87,5 +87,45 @@
     
     }
 
+    function CountNamedTopics($name){
+
+
+        require("../App/Model/db_connect.php"); 
+        $sql = "SELECT COUNT(Topic_Number) as nb_topics
+                from  Topics
+                where upper(TITLE) LIKE CONCAT('%', upper(:Name), '%')
+                ";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->BindParam(":Name",$name);
+        $stmt -> execute();
+
+        $CountData = $stmt -> fetch(PDO::FETCH_ASSOC);
+
+        return $CountData;
+
+    
+    }
+
+    function GeneralCountTopics(){
+
+
+        require("../App/Model/db_connect.php"); 
+        $sql = "SELECT COUNT(Topic_Number) as nb_topics
+                from  Topics
+                ";
+
+        $stmt = $conn->prepare($sql);
+        $stmt -> execute();
+
+        $CountData = $stmt -> fetch(PDO::FETCH_ASSOC);
+
+        return $CountData;
+
+    
+    }
+
+    
+
 
 ?>
