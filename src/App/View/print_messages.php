@@ -12,6 +12,9 @@ $list_messages=display_comments($topic_id);
 
 <div class="row">
   <h2 class="bg-light text-center"><?php echo $first_comment["TITLE"]; ?></h2>
+
+
+
   <?php if($first_comment['Author_ID'] == $_SESSION['id']){
 
     ?>
@@ -71,14 +74,22 @@ foreach($list_messages as $i=>$list){
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require "../App/Controller/last_modification_following.php"; ?>  </p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
                   <?php
-                  if($list['Author_ID'] === $_SESSION['id']){
+                  if (isset($_POST['delete'])) {
+                  if($list['Author_ID'] === $_SESSION['id']  ) {
                     ?>
+                    <div class="row">
                     <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
-                    <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
+                    <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 mr-2 h2">Modify</button>
                     </form> 
+                    <form method="POST"   id="modify-comment">
+                    <button id="delete" type="submit" name="delete" class="btn btn-primary mt-5 mr-2 h2">Delete</button>
+                  </form>
+                </div>
+
 
                   <?php
-                  } 
+                  } }
+                  
                   ?>
                   <hr>
                   <p class="user-id"> <?php echo $list["Signature"] ?> </p>
