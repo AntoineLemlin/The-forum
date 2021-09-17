@@ -3,7 +3,7 @@
 
 function print_topic($board, $search) {
 
-require "db_connect.php";
+require "../App/Model/db_connect.php";
 
 if($board === NULL && $search === NULL){
     $sql = "SELECT Nickname, Content, Creation_Date, TITLE, Topic_Number, locked FROM Users inner join Topics on Users.id=Topics.Author_ID";
