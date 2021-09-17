@@ -8,6 +8,11 @@ services:
       - "./src:/var/www/html"
     ports:
       - "80:80"
+  composer:
+    image: composer:1.9
+    command: ["composer", "install"]
+    volumes:
+      - /var/www/html:/src
   mysql:
     image: "mariadb"
     restart: "unless-stopped"
@@ -31,3 +36,5 @@ services:
       PMA_PASSWORD: "root"
 volumes:
   mysql_db:
+
+

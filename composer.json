@@ -1,0 +1,15 @@
+{
+    "name": "antoi/the-forum",
+    "autoload": {
+        "psr-4": {
+            "Antoi\\TheForum\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AntoineLemlin",
+            "email": "ant.lemlin@gmail.com"
+        }
+    ],
+    "require": {}
+}
