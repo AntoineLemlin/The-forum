@@ -32,7 +32,7 @@
         $sql = "SELECT COUNT(ID_Message) as nb_messages,Messages.Create_Date as last_date
                 from  Topics inner join Messages
                 on Topics.Topic_Number=Messages.Topic_Number
-                where upper(Board_Name)=upper(:Name)
+                where upper(Board_Name)=upper(:Name) group by ID_Message
                 order by Create_Date DESC
                 LIMIT 1";
 
