@@ -1,0 +1,5 @@
+build:
+  docker:
+    src: Dockerfile
+run:
+  src: bundle exec index -C Dockerfile
