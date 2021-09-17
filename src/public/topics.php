@@ -17,6 +17,7 @@ session_start();
   require("../App/Controller/login_control.php");
   require("../App/Controller/register.php");
   require("../App/View/check_image.php");
+  require("../App/Model/board_fetch.php");
   
  ?>
 <body class="bg-light">
@@ -174,7 +175,8 @@ session_start();
               <div class="col-12 mt-5 d-flex">
                 <a id="new-topic" class="h4 mr-5 text-white bg-primary p-3 d-flex align-items-center" href="new_topics.php">New Topic</a> <a id="topic-filter" class="h4 mr-5 text-dark rounded border border-dark bg-light p-3" href="#"><i class="fas fa-sort-amount-down h2"></i></a>
                 <ul class="d-flex align-items-center h3 ml-auto">
-                  <li class="list-unstyled">12 topics</li>
+                  <?php require "../App/View/count_topics.php" ?>
+                  <!-- <li class="list-unstyled">12 topics</li> -->
                   <li class="ml-5">Page 1 of 1</li>
                 </ul>
               </div>
