@@ -89,11 +89,11 @@ foreach($list_messages as $i=>$list){
                     <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
                     <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 mr-2 h2">Modify</button>
                     </form> 
-                    <form method="POST" action ="../App/view/redirecting.php?topic_number=<?php echo $topic_id; ?>"  id="modify-comment">
+                    <form method="POST"  id="modify-comment">
                     <button id="delete" type="submit" name="delete" class="btn btn-primary mt-5 mr-2 h2">Delete</button></a> 
                   </form>
                 </div>
-
+<!-- action ="../App/view/redirecting.php?topic_number=  -->
 
                   <?php
                   } }

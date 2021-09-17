@@ -13,6 +13,9 @@ if(isset($_POST['add-comment'])) {
  exit;
 }
 
+if (isset($_POST['delete'])){ 
+  header("Refresh:0"); 
+}
 
 
 require "../App/Controller/click_topics_checker.php";
