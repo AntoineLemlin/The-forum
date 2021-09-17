@@ -10,7 +10,7 @@ function nickname_unique($nickname){
     $statement = $conn -> prepare($sql);
     $statement -> BindParam (':nickname', $nickname);
     $statement -> execute () ;
-    $nickname_result = $statement -> fetchAll(PDO::FETCH_ASSOC);
+  
 
     if($statement->rowCount() > 0){
         echo "identifiant déjà pris";
@@ -29,7 +29,7 @@ function nickname_unique_edit($nickname, $id){
     $statement -> BindParam (':nickname', $nickname);
     $statement -> BindParam (':id', $id);
     $statement -> execute () ;
-    $nickname_result = $statement -> fetchAll(PDO::FETCH_ASSOC);
+   
 
     if($statement->rowCount() > 0){
         echo "identifiant déjà pris";

@@ -4,6 +4,8 @@ $topic_id=$_GET['topic_number'] ;
 
 $first_comment=first_comment($topic_id);
 $list_messages=display_comments($topic_id);
+require "../App/Model/Deleted_content.php";
+
 
 ?>
 
@@ -15,7 +17,10 @@ $list_messages=display_comments($topic_id);
 
 
 
-  <?php if($first_comment['Author_ID'] == $_SESSION['id']){
+  <?php 
+  
+  
+  if($first_comment['Author_ID'] == $_SESSION['id']){
 
     ?>
   <form action="" class="ml-auto" method="POST">
@@ -43,6 +48,7 @@ $list_messages=display_comments($topic_id);
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $first_comment["Creation_Date"] ?> <?php require "../App/Controller/last_modification.php" ?>  </p>
                   <p class="user-id mb-5"><?php echo $first_comment["Content"] ?> </p>
                   <?php 
+                 
                   if($first_comment['Author_ID'] == $_SESSION['id']){
                     ?>
                     <form method="POST" action="edit_comment.php?topic_num=<?Php echo $topic_id ?>"  id="modify-comment">
@@ -74,15 +80,17 @@ foreach($list_messages as $i=>$list){
                   <p class="user-id"> <i class="far fa-clock mr-2"></i><?php echo $list["Create_date"] ?>   <?php require "../App/Controller/last_modification_following.php"; ?>  </p>
                   <p class="user-id mb-5"><?php echo $list["Content"] ?> </p>
                   <?php
-                  if (isset($_POST['delete'])) {
+                  require "../App/Controller/check_deleted.php";
+
+                  if ( Deleted_checker($list['ID_Message'] ) ==='0') {
                   if($list['Author_ID'] === $_SESSION['id']  ) {
                     ?>
                     <div class="row">
                     <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
                     <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 mr-2 h2">Modify</button>
                     </form> 
-                    <form method="POST"   id="modify-comment">
-                    <button id="delete" type="submit" name="delete" class="btn btn-primary mt-5 mr-2 h2">Delete</button>
+                    <form method="POST" action ="../App/view/redirecting.php?topic_number=<?php echo $topic_id; ?>"  id="modify-comment">
+                    <button id="delete" type="submit" name="delete" class="btn btn-primary mt-5 mr-2 h2">Delete</button></a> 
                   </form>
                 </div>
 
