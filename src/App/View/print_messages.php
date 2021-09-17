@@ -6,6 +6,12 @@ $first_comment=first_comment($topic_id);
 $list_messages=display_comments($topic_id);
 require "../App/Model/Deleted_content.php";
 
+if(isset($_SESSION['id'])){
+  $id = $_SESSION['id'];
+}else{
+  $id = NULL;
+}
+
 
 ?>
 
@@ -20,7 +26,7 @@ require "../App/Model/Deleted_content.php";
   <?php 
   
   
-  if($first_comment['Author_ID'] == $_SESSION['id']){
+  if($first_comment['Author_ID'] == $id){
 
     ?>
   <form action="" class="ml-auto" method="POST">
@@ -49,7 +55,7 @@ require "../App/Model/Deleted_content.php";
                   <p class="user-id mb-5"><?php echo $first_comment["Content"] ?> </p>
                   <?php 
                  
-                  if($first_comment['Author_ID'] == $_SESSION['id']){
+                  if($first_comment['Author_ID'] == $id){
                     ?>
                     <form method="POST" action="edit_comment.php?topic_num=<?Php echo $topic_id ?>"  id="modify-comment">
                     <button id="submit" type="submit" name="edit" class="btn btn-primary mt-5 w-25 h2">Modify</button>
@@ -83,7 +89,7 @@ foreach($list_messages as $i=>$list){
                   require "../App/Controller/check_deleted.php";
 
                   if ( Deleted_checker($list['ID_Message'] ) ==='0') {
-                  if($list['Author_ID'] === $_SESSION['id']  ) {
+                  if($list['Author_ID'] === $id  ) {
                     ?>
                     <div class="row">
                     <form method="POST" action="edit_list.php?id_message=<?Php echo $list['ID_Message']?>"  id="modify-comment">
