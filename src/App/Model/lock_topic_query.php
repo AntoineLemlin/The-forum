@@ -2,7 +2,7 @@
 
 function lockTopic($topic_id){
 
-    require 'db_connect.php';
+    require "../App/Model/db_connect.php";
 
     $sql = "UPDATE `Topics` SET `locked`='yes' WHERE Topic_Number=:topicNumber";
 
@@ -15,7 +15,7 @@ function lockTopic($topic_id){
 
 function unlockTopic($topic_id){
 
-    require 'db_connect.php';
+    require "../App/Model/db_connect.php";
 
     $sql = "UPDATE `Topics` SET `locked`='no' WHERE Topic_Number=:topicNumber";
 
@@ -28,7 +28,7 @@ function unlockTopic($topic_id){
 
 
 function get_topic($topic_number){
-    require "db_connect.php";
+    require "../App/Model/db_connect.php";
     
     $sql = "SELECT * from Topics where Topic_Number=:Topic_Num";
     

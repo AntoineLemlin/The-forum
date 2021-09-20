@@ -2,7 +2,7 @@
 
   function changePassword($confirm){
 
-      require("db_connect.php");
+      require("../App/Model/db_connect.php");
     
             
     $sql="SELECT * from Users where Nickname=:nickname ";

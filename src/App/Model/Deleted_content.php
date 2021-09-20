@@ -1,7 +1,7 @@
 <?php 
 
 function deleted_content($id_message) {
-    require "db_connect.php";
+    require "../App/Model/db_connect.php";
 
     $sql = "UPDATE `Messages` SET `Content` ='content deleted', `Deleted` = TRUE WHERE ID_Message =:ID_Message";
     $stmt = $conn -> prepare($sql);
@@ -15,7 +15,7 @@ function deleted_content($id_message) {
 }
 
 function Deleted_checker($id_messages) {
-    require "db_connect.php";
+    require "../App/Model/db_connect.php";
 
     $sql = "SELECT Deleted FROM Messages  WHERE ID_Message =:ID_Message";
     $stmt = $conn -> prepare($sql);

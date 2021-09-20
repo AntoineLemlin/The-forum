@@ -1,7 +1,7 @@
 <?php
 
 function insert($email,$nickname,$password,$signature)  {
-  require "db_connect.php";
+ require "../App/Model/db_connect.php";
 
    $sql = "INSERT INTO Users (
             email,

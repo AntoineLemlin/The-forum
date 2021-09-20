@@ -1,7 +1,7 @@
 <?php
 
 function find_authorid($nickname){
-    require "db_connect.php";
+    require "../App/Model/db_connect.php";
     
     $sql="SELECT id from Users where nickname=:nickname";
     $stmt=$conn->prepare($sql);

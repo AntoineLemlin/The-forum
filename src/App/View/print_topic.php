@@ -22,7 +22,7 @@ $topic = print_topic($boardname, $search);
 //print_r($topic);
 
 
-foreach ($topic as $top ) {
+foreach ($topic as $top) {
     ?>
  
               <tr class="">

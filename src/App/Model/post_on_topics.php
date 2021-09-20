@@ -2,7 +2,7 @@
 
 function Get_Post_Count ($topic_id) {
 
-require "db_connect.php";
+require "../App/Model/db_connect.php";
     
 $sql = "SELECT count(Messages.Content)  
 FROM Messages inner join Topics 

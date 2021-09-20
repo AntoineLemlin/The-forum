@@ -9,8 +9,8 @@ $hash4 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 $hash5 = password_hash("rasmuslerdorf", PASSWORD_DEFAULT); */
 
 function insert($avatar, $email, $nickname,$password,$signature) {
-    require "db_connect.php";
-    // $user = array(':avatar' => $avatar,
+        require "../App/Model/db_connect.php";
+        // $user = array(':avatar' => $avatar,
     //               ':email' => $email,
     //               ':nickname' => $nickname,
     //               ':password' => $password,

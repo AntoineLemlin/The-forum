@@ -1,7 +1,7 @@
 <?php
 
 function first_comment($topic_number){
-    require "db_connect.php";
+    require "../App/Model/db_connect.php";
     
     $sql = "SELECT Email,Nickname,Creation_Date,Topics.Edition_date, Signature,Avatar,Content,TITLE, Author_ID
     FROM Topics inner join Users 

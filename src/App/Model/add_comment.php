@@ -2,7 +2,7 @@
 
 
 function add_comment($topic,$date,$auteurid,$content) {
-        require 'db_connect.php'; 
+        require '../App/Model/db_connect.php'; 
     $sql = 'INSERT INTO Messages (author_id,content,create_date,topic_number)  VALUES
             (:author_id,:content,:create_date,:topic_number )';
 

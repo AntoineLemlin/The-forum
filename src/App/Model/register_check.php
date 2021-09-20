@@ -4,7 +4,7 @@
 
 
 function nickname_unique($nickname){
-    require ("db_connect.php");
+    require "../App/Model/db_connect.php";
     $sql = "SELECT * FROM Users WHERE Nickname =upper(:nickname) " ;
 
     $statement = $conn -> prepare($sql);
@@ -22,7 +22,7 @@ function nickname_unique($nickname){
 }
 
 function nickname_unique_edit($nickname, $id){
-    require ("db_connect.php");
+    require "../App/Model/db_connect.php";
     $sql = "SELECT * FROM Users WHERE Nickname =upper(:nickname) AND Id !=:id" ;
 
     $statement = $conn -> prepare($sql);
