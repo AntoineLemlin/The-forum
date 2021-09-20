@@ -3,7 +3,7 @@
 if(isset($_POST["login"])){
 
     if(!empty($_POST["username"]) && !empty($_POST["password"])){
-       include_once ("/var/www/html/App/Model/check_login.php");
+       require("../App/Model/check_login.php");
         $username=$_POST["username"];
         $password=$_POST["password"];
         
