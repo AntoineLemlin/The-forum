@@ -165,7 +165,7 @@ session_start();
         
          <tbody class="bg-light">
            
-         <?php  require("../App/view/print_topic.php") ?>
+         <?php  require("../App/View/print_topic.php") ?>
         </tbody> 
 <main class="mx-5">
 
